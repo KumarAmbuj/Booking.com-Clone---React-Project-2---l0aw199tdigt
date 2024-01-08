@@ -1,0 +1,31 @@
+.frequentlyContainer{
+    margin-top: 40px;
+}
+.frequentlyContainerHeaderText{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.frequentlyContents{
+    display: flex;
+    gap:20px
+}
+.frequentlyContentsBox{
+    padding: 15px;
+    border: 1px solid rgb(214, 212, 212);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.frequentlyContentsBoxHeaderText{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.frequentlyContentsBoxLightText{
+    font-size: 16px;
+    color:grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.frequentlyContentsChild{
+    flex:1;
+}

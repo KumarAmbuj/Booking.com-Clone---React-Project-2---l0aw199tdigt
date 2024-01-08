@@ -1,0 +1,45 @@
+.propertySliderContainer{
+    width: 80%;
+    margin:50px auto;
+}
+.propertySlider{
+    margin-top: 5px;
+}
+.propertySliderText{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+
+.SliderCard{
+    /* height: 15rem; */
+    padding: 20px !important;
+
+    
+}
+.SliderCardText{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 7px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.SliderCard img{
+    
+    width: 92%;
+    border-radius: 10px;
+    cursor: pointer;
+    object-fit: cover;
+    
+}
+
+@media only screen and (max-width: 900px) {
+    .propertySliderContainer{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .propertySliderContainer{
+        width: 100%;
+    }
+}

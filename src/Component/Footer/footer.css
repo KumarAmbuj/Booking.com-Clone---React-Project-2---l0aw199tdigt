@@ -1,0 +1,40 @@
+.FooterContainer{
+    width:80%;
+    margin: auto;
+    /* height: 300px; */
+    /* outline: 1px solid red; */
+
+}
+.destination{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Avenir Next",BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;;
+}
+.regionsButtons{
+    margin-top: 20px;
+}
+
+.regionsButtons .regionButton{
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    background-color: white;
+    margin-right: 10px;
+    cursor: pointer;
+    
+}
+.regionButton:hover{
+    background-color: rgb(241, 241, 241);
+}
+
+#active{
+    border: 1px solid blue;
+    background-color: #d3e4f7;
+}
+
+
+@media only screen and (max-width: 1020px) {
+    .FooterContainer {
+      width: 100%;
+    }
+  }

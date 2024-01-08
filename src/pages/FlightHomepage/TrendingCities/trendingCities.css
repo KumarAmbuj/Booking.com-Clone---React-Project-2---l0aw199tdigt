@@ -1,0 +1,52 @@
+.trendingCitiesContainer{
+    margin-top: 30px;
+}
+.trendingCitiesHeaderText{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.trendingCitiesLightText{
+    margin-top: 5px;
+    font-size: 18px;
+    color: grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.trendingCitiesImages{
+    display: flex;
+    gap:10px;
+    margin-top: 20px;
+
+}
+/* .trendingCitiesSingleImage{
+    width: 23%;
+} */
+.trendingCitiesSingleImage img{
+    border-radius: 10px;
+   
+}
+.trendingCitiesImageText{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.trendingCitiesImageLightText{
+    margin-top: 5px;
+    font-size: 14px;
+    color: grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+
+
+/* @media only screen and (max-width: 1000px) {
+    .trendingCitiesImages{
+        flex-wrap: wrap;
+    }
+} */
+
+@media only screen and (max-width: 767px) {
+    .trendingCitiesImages{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

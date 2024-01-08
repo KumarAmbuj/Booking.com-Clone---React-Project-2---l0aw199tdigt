@@ -1,0 +1,16 @@
+.flightHomepageContainer{
+    width: 80%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    .flightHomepageContainer{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .flightHomepageContainer{
+        width: 100%;
+    }
+}

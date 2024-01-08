@@ -1,0 +1,35 @@
+.flightWorldwideContainer{
+    margin-top: 30px;
+}
+.flightWorldwideHeaderText{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.flightWorldwideLightText{
+    font-size: 18px;
+    color:grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+
+.flightWorldwideButtons{
+    margin-top: 20px;
+    display: flex;
+    border-bottom: 1px solid rgb(197, 195, 195);
+}
+.flightWorldwideButtons button{
+    padding: 20px;
+    background-color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+
+}
+.flightWorldwideButtons button:hover{
+    background-color: rgb(231, 229, 229);
+}
+#activeType{
+    color:blue;
+    border-bottom: 1px solid blue;
+}

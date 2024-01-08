@@ -1,0 +1,21 @@
+.regionContainer{
+    margin-top: 18px;
+    display: flex;
+}
+.regionChild{
+    flex:1;
+    
+}
+.RegionLink{
+    font-size: 18px;
+    font-weight: 550;
+}
+.RegionProperties{
+    font-size: 15px;
+    color: #5a5858;
+    font-weight: 500;
+}
+
+.RegionLinkProperties{
+    margin-top: 20px;
+}

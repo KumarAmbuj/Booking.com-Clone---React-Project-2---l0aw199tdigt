@@ -1,0 +1,30 @@
+.flightWorldwideComponentContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap:20px;
+    justify-content: space-between;
+}
+.flightWorldwideContent{
+    display: flex;
+    gap:20px;
+    align-items: center;
+
+}
+.flightWorldwideImage img{
+    object-fit: cover;
+    height: 64px;
+    width: 64px;
+    border-radius: 5px;
+}
+.flightWorldwideBoldText{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.flightWorldwideLightText{
+    margin-top: 10px;
+    font-size: 16px;
+    color:grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}

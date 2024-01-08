@@ -1,0 +1,71 @@
+.hotelFacilityContainer{
+    margin-top: 30px;
+}
+
+.hotelFacilityNameAndButton{
+    display: flex;
+    justify-content: space-between;
+}
+.hotelFacilityNameBoldText{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.hotelFacilityNameLightText{
+    font-size: 18px;
+    margin-top: 5px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:rgb(87, 85, 85);
+
+}
+.mostPopularText{
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.hotelFacilityButton button{
+    padding: 10px;
+    background-color: blue;
+    color:white;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    border: none;
+    cursor: pointer;
+}
+.facilityType{
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+}
+.facilityTypeName{
+    font-size: 16px;
+    color: rgb(71, 71, 71);
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.hotelTypeAndFacilities{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.hotelTypeAndFacilitiesBoldText{
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.hotelTypeAndFacilitiesLightText{
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+
+}
+.hotelTypeAndFacilitiesLightText span{
+    margin-left: 10px;
+}
+.hotelTypeAndFacilitiesLightText i{
+    font-size: 14px;
+    font-weight: 300;
+
+}

@@ -1,0 +1,29 @@
+.singleFlightDetailsFilterAndFlightContainer{
+    display: flex;
+}
+.flightFilter{
+    flex:1.2;
+}
+.flightComponent{
+    flex:2.8;
+}
+.flightComponentTopButtons{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(206, 203, 203);
+    border-radius: 5px;
+
+}
+.flightComponentTopButtons button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: white;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.flightComponentTopButtons button:hover{
+    background-color: rgb(245, 241, 241);
+}

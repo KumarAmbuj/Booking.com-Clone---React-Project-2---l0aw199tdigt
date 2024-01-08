@@ -1,0 +1,149 @@
+.emailAddress{
+    margin-top: 50px;
+    height:16rem;
+    /* outline: 1px solid red; */
+    background-color: #022458;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.saveTime{
+    font-size: 24px;
+    color: white;
+}
+.signupText{
+    margin-top: 10px;
+    color:rgb(190, 187, 187)
+}
+.emailInput{
+    margin-top: 13px;
+    display: flex;
+    gap:5px;
+}
+.emailInput input{
+    height: 55px;
+    width: 15rem;
+    border: none;
+    padding-left: 10px;
+    font-size: 18px;
+    border-radius: 3px;
+}
+.emailInput button{
+    height:55px;
+    width:7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #035ec5;
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.lowerEmailAddress{
+    /* height:9rem; */
+    background-color: rgb(4, 4, 179);
+    padding-top: 10px;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+
+.lowerButton{
+    display: flex;
+    justify-content: center;
+}
+
+.lowerButton button{
+  background-color: rgb(4, 4, 179);
+  color:white;
+  padding: 7px 20px;
+  border: 1px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lowerButton button:hover{
+    background-color: rgb(3, 3, 99);
+}
+.FooterLine{
+    
+    border:1px solid rgb(196, 190, 190);
+    
+}
+.FooterLinkHeader{
+    background-color: rgb(4, 4, 179);
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+.FooterLinkHeaderType{
+    text-decoration: underline;
+    color: white;
+    padding:10px 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.FooterLinkHeaderType:hover{
+    background-color: rgb(3, 3, 99);
+
+}
+
+.LowerLink{
+    display: flex;
+
+}
+.LowerLinkDiv{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.LowerLinkDivType{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    color:blue;
+    cursor: pointer;
+}
+.LowerLinkDivType:hover{
+    color:red;
+}
+
+.extranetLogin{
+    margin-top: 50px;
+    text-align: center;
+    color:blue;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+}
+.extranetLogin:hover{
+    color:red;
+
+}
+
+.copyright{
+    margin-top: 30px;
+    width: 80%;
+    margin: auto;
+    font-size: 14px;
+}
+.copyrightText{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.FooterBottomImages{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:50px;
+    margin-bottom: 30px;
+}

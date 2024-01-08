@@ -1,0 +1,86 @@
+.trendingDestinationsContainer{
+    width: 80%;
+    margin: 20px auto;
+}
+.trendingDestinationsBoldText{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.trendingDestinationsLightText{
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    color: gray;
+}
+.trendingDestinationsImage1{
+    width: 100%;
+    display: flex;
+    gap:20px;
+    margin-top: 20px;
+    /* max-height: 15rem; */
+}
+.trendingDestinationsImage11{
+    width: 50%;
+    display: flex;
+    gap:20px;
+    margin-top: 20px;
+    position: relative;
+    /* max-height: 15rem; */
+}
+.trendingDestinationsImage11 img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px; 
+    max-height: 15rem;
+
+}
+.trendingDestinationsText{
+    position: absolute;
+    top:13%;
+    left:5%;
+    font-size: 24px;
+    font-weight: 700;
+    color:white;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    text-shadow: 2px 2px black;
+}
+.trendingDestinationsText2{
+    position: absolute;
+    top:13%;
+    left:5%;
+    font-size: 24px;
+    font-weight: 700;
+    color:white;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    text-shadow: 2px 2px black;
+}
+.trendingDestinationsImage2{
+    width: 100%;
+    display: flex;
+    gap:20px;
+    margin-top: 20px;
+    
+}
+
+.trendingDestinationsImage21{
+    width: 32%;
+    display: flex;
+    gap:20px;
+    margin-top: 20px;
+    position: relative;
+    
+}
+.trendingDestinationsImage21 img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    max-height: 15rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .trendingDestinationsContainer{
+        width: 100%;
+    }
+}

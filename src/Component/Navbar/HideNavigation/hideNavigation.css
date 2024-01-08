@@ -1,0 +1,55 @@
+.hideNavigationContainer{
+    width:100%;
+    
+    z-index: 3;
+    outline:1px solid red;
+    position: fixed;
+    top:0;
+    background-color: white;
+    height: 100vh;
+    overflow-y: scroll;
+    
+
+}
+.crossButton{
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.more{
+    font-size: 26px;
+    font-weight: 700;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: "Avenir Next",BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;;
+}
+.hideMenuItem{
+    height:60px;
+    display: flex;
+    align-items: center;
+    gap:20px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.hideMenuItem:hover{
+    background-color: rgb(235, 232, 232);
+}
+
+.hideMenuName{
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+
+}
+.menuHeader{
+    height:60px;
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    display: flex;
+    align-items: center;
+}

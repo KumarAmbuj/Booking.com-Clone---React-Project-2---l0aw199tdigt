@@ -1,0 +1,50 @@
+.hotelListContainer{
+    width: 80%;
+    margin: 10px auto;
+
+}
+.upperText{
+    font-size: 14px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.FilterHotelList{
+    display: flex;
+    margin-top: 20px;
+    /* height: 300px; */
+}
+.FilterHotels{
+    flex:1;
+    /* outline: 1px solid red; */
+    box-sizing: border-box;
+    
+    border: 1px solid rgb(223, 219, 219);
+    border-radius: 10px;
+    
+}
+.searchResultsText{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    padding-left: 10px;
+}
+.HotelsContainer{
+    flex:3;
+    /* outline: 1px solid red; */
+}
+.filterHeading{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    padding: 10px;
+}
+@media only screen and (max-width: 1000px) {
+    .hotelListContainer{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hotelListContainer{
+        width: 100%;
+    }
+}

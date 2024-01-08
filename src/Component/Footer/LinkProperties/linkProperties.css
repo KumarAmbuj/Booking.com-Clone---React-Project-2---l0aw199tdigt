@@ -1,0 +1,13 @@
+.RegionLinkProperties{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.RegionLink{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.RegionProperties{
+    font-size: 12px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}

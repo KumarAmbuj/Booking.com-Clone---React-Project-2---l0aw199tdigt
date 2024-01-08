@@ -1,0 +1,91 @@
+.heroSectionContainer{
+    height: 62vh;
+    position: relative;
+
+}
+.heroSectionContainer img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.heroSectionText1{
+    position:absolute;
+    left:5%;
+    top:15%;
+    font-size: 54px;
+    font-weight: 700;
+    color: white;
+    font-family: "Avenir Next",BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+
+.heroSectionText2{
+    position:absolute;
+    left:5%;
+    top:32%;
+    font-size: 54px;
+    font-weight: 700;
+    color: white;
+    font-family: "Avenir Next",BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+
+}
+.heroSectionText3{
+    position:absolute;
+    left:5%;
+    top:52%;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    font-family: "Avenir Next",BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+
+}
+.exploreButton{
+    position: absolute;
+    left:5%;
+    top:67%;
+}
+.exploreButton button{
+    height: 50px;
+    width:220px;
+    background-color: #137feb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.exploreButton button:hover{
+    background-color: #0558aa;
+    color: white;
+
+}
+
+
+@media only screen and (max-width: 800px) {
+    .heroSectionText1{
+        top:7%;
+        font-size: 34px;
+    }
+    .heroSectionText2{
+        top:18%;
+        font-size: 34px;
+    }
+    .heroSectionText3{
+        top:32%;
+        font-size: 20px;
+    }
+    .exploreButton{
+        position: absolute;
+        left:5%;
+        top:54%;
+    }
+    .exploreButton button{
+        height: 50px;
+        width:220px;
+        background-color: #137feb;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,63 @@
+.getInstantDiscountContaniner{
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    padding:20px;
+    gap:30px;
+    box-sizing: border-box;
+    border:1px solid rgb(212, 210, 210);
+    border-radius: 10px;
+}
+.getInstantDiscountImage{
+   width: 20%;
+   height: auto;
+}
+.getInstantDiscountImage img{
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+}
+.getInstantDiscountBoldText{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    margin-left: -60px;
+}
+.getInstantDiscountLightText{
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    margin-left: -60px;
+    
+}
+.getInstantDiscountButtons{
+    margin-top: 30px;
+    display: flex;
+    gap:10px;
+    margin-left: -60px;
+}
+.getInstantDiscountButtons button{
+    padding:10px;
+    outline: none;
+    border: none;
+    /* border: 1px solid blue; */
+    background-color: white;
+    color:blue;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#Active{
+    border: 1px solid blue;
+}
+.getInstantDiscountButtons button:hover{
+    background-color: rgb(209, 209, 241);
+}
+
+@media only screen and (max-width: 1100px) {
+    .getInstantDiscountContaniner{
+       width: 100%;
+    }
+}
