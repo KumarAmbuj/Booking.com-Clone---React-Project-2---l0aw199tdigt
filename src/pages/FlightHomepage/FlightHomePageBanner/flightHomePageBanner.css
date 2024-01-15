@@ -1,0 +1,32 @@
+.flightHomepageBannerContainer{
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap:20px;
+    flex-wrap: wrap;
+    background-color: rgb(241, 239, 239);
+}
+.flightHomepageBannerContent{
+    display: flex;
+    height: 140px;
+    align-items: center;
+    gap:20px;
+    width: 380px;
+}
+.flightHomepageBannerImage img{
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+}
+.flightHomepageBannerBoldText{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.flightHomepageBannerLightText{
+    font-size: 16px;
+    color:grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}

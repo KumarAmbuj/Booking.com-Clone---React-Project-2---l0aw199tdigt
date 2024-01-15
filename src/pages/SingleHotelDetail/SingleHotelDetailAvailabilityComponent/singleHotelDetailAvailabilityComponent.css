@@ -1,0 +1,108 @@
+.availabilityContainer{
+    margin-top: 20px;
+}
+.availabilityHeader{
+    font-size: 28px;
+    
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+.availabilityTableContainer{
+    margin-top: 20px;
+    
+}
+.availabilityTableRow{
+    display: flex;
+}
+.tableHeading1{
+    flex:3.1;
+    padding: 10px;
+    background-color: #4c76b2;
+    color:white;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+.tableHeading2{
+    flex:0.9;
+    padding: 10px;
+    background-color: #4c76b2;
+    color:white;
+    border: 1px solid grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+.tableHeading3{
+    flex:1.3;
+    padding: 10px;
+    background-color: #4c76b2;
+    color:white;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+.tableData1{
+    flex:3.1;
+    height: 65px;
+    border-bottom: 1px solid #0071c2;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.tableData2{
+    flex:0.9;
+    height: 65px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.tableData3{
+    flex:1.3;
+    height: 65px;
+    border-bottom: 1px solid blue;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.tableData1BoldText{
+    color:blue;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: underline;
+}
+.tableData1LightText{
+    margin-top: 5px;
+    color:grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+.tableData2 i{
+    font-size: 20px;
+    margin-right: 5px;
+}
+.tableData3 button{
+    width: 97%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0071c2;
+    color:white;
+    border: none;
+    outline: none;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+.tableData3 button:hover{
+    background-color: rgb(4, 4, 95);
+}
+.tableData1LightText i{
+    font-size: 18px;
+    margin-left: 5px;
+    color: black;
+}

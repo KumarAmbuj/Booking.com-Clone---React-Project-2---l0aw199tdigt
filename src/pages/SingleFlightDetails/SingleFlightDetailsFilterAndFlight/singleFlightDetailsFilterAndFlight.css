@@ -27,3 +27,12 @@
 .flightComponentTopButtons button:hover{
     background-color: rgb(245, 241, 241);
 }
+
+@media only screen and (max-width: 767px) {
+    .flightFilter{
+        display: none;
+    }
+    .flightComponent{
+     width: 90%;
+    }
+}

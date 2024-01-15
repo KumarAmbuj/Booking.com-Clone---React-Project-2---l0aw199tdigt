@@ -4,7 +4,39 @@
 }
 .propertySlider{
     margin-top: 5px;
+    position: relative;
 }
+.sliderLeft{
+    position: absolute;
+    left:0%;
+    top:35%;
+    z-index: 3;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px grey;
+}
+.sliderRight{
+    position: absolute;
+    right:-0.5%;
+    top:35%;
+    z-index: 3;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px grey;
+}
+
 .propertySliderText{
     font-size: 24px;
     font-weight: 700;
@@ -25,10 +57,11 @@
 }
 .SliderCard img{
     
-    width: 92%;
+    width: 95%;
     border-radius: 10px;
     cursor: pointer;
     object-fit: cover;
+    max-height: 14rem;
     
 }
 

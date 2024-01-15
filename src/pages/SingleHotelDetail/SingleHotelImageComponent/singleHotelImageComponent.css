@@ -1,0 +1,136 @@
+.singleHotelImageContainer{
+    margin-top: 0px;
+}
+.singleHotelTopButtons{
+    display: flex;
+    justify-content: start;
+    border-bottom: 1px solid rgb(201, 199, 199);
+    
+    
+}
+
+.singleHotelTopButtons button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: white;
+    padding: 20px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.singleHotelTopButtons button:hover{
+    background-color: rgb(245, 241, 241);
+}
+
+.singleHotelHeaderTextAndButton{
+    display: flex;
+    justify-content: space-between;
+}
+.singleHotelHeaderText{
+    flex:3;
+}
+.singleHotelButtons{
+    flex:1;
+}
+.singleHotelBoldText{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.singleHotelLightText{
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    line-height: 10px;
+}
+.singleHotelButtonsFlex{
+    display: flex;
+    justify-content: flex-end;
+    gap:20px;
+    margin-top: 10px;
+}
+.singleHotelButtonsFlex i{
+    font-size: 20px;
+    color:#0071c2;
+    cursor: pointer;
+}
+
+.singleHotelButtonsFlex button{
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    background-color: #0071c2;
+    color:white;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    cursor: pointer;
+}
+.singleHotelLowerButton{
+    margin-top: 10px ;
+    display: flex;
+    justify-content: end;
+}
+.singleHotelLowerButton button{
+    padding: 10px 20px;
+   cursor: pointer;
+   border: none;
+   outline: none;
+   background-color: white;
+   font-size: 16px;
+   font-weight: 600;
+   color: rgb(79, 79, 236);
+}
+.singleHotelLowerButton button:hover{
+    background-color: #d3e7f5;
+}
+
+.singleHotelStarIcon i{
+    margin-left:4px;
+    color: #febb02;
+}
+.singleHotelStarIcon{
+    margin-top: 10px;
+}
+.singleHotelStarIcon button{
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    font-size: 12px;
+    padding: 5px;
+    font-weight: 200;
+}
+.singleHotelImageBox{
+    display: flex;
+    gap:10px;
+    margin-top: 10px;
+}
+.singleHotelImageBox img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.singleHotelImageBoxLeft{
+    flex:1
+}
+.singleHotelImageBoxLeft img{
+    max-height: 12rem;
+}
+.singleHotelImageBoxRight{
+    flex:2;
+}
+.singleHotelImageBoxRight img{
+    max-height: 24rem;
+}
+.singleHotelLowerImageBox{
+    display: flex;
+    gap:21px;
+}
+
+.singleHotelLowerImageBox img{
+    object-fit: cover;
+    max-height: 130px;
+}

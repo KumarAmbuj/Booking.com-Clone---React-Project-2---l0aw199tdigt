@@ -1,5 +1,11 @@
 import "./trendingDestinations.css";
+import { Link, useNavigate } from "react-router-dom";
 function TrendingDestinations() {
+  const navigate = useNavigate();
+  function handleNavigate(val) {
+    navigate(`/hotel-list/${val}`);
+  }
+
   return (
     <div className="trendingDestinationsContainer">
       <div className="trendingDestinationsBoldText">Trending destinations</div>
@@ -7,7 +13,12 @@ function TrendingDestinations() {
         Most popular choices for travellers from India
       </div>
       <div className="trendingDestinationsImage1">
-        <div className="trendingDestinationsImage11">
+        <div
+          className="trendingDestinationsImage11"
+          onClick={() => {
+            handleNavigate("Delhi, National Capital Territory of Delhi");
+          }}
+        >
           <div className="trendingDestinationsText">
             <span>New Delhi</span>
             <span>
@@ -19,7 +30,13 @@ function TrendingDestinations() {
           </div>
           <img src="https://cf.bstatic.com/xdata/images/city/600x600/684765.jpg?k=3f7d20034c13ac7686520ac1ccf1621337a1e59860abfd9cbd96f8d66b4fc138&o=" />
         </div>
-        <div className="trendingDestinationsImage11">
+
+        <div
+          className="trendingDestinationsImage11"
+          onClick={() => {
+            handleNavigate("Bangalore, Karnataka");
+          }}
+        >
           <div className="trendingDestinationsText">
             <span>Bangalore</span>
             <span>
@@ -34,7 +51,12 @@ function TrendingDestinations() {
       </div>
 
       <div className="trendingDestinationsImage2">
-        <div className="trendingDestinationsImage21">
+        <div
+          className="trendingDestinationsImage21"
+          onClick={() => {
+            handleNavigate("Mumbai, Maharashtra");
+          }}
+        >
           <div className="trendingDestinationsText2">
             <span>Mumbai</span>
             <span>
@@ -46,7 +68,12 @@ function TrendingDestinations() {
           </div>
           <img src="https://cf.bstatic.com/xdata/images/city/600x600/971346.jpg?k=40eeb583a755f2835f4dcb6900cdeba2a46dc9d50e64f2aa04206f5f6fce5671&o=" />
         </div>
-        <div className="trendingDestinationsImage21">
+        <div
+          className="trendingDestinationsImage21"
+          onClick={() => {
+            handleNavigate("Chennai, Tamil Nadu");
+          }}
+        >
           <div className="trendingDestinationsText2">
             <span>Chennai</span>
             <span>
@@ -58,7 +85,12 @@ function TrendingDestinations() {
           </div>
           <img src="https://cf.bstatic.com/xdata/images/city/600x600/684730.jpg?k=e37b93d88c1fe12e827f10c9d6909a1def7349be2c68df5de885deaa4bc01ee3&o=" />
         </div>
-        <div className="trendingDestinationsImage21">
+        <div
+          className="trendingDestinationsImage21"
+          onClick={() => {
+            handleNavigate("Jaipur, Rajasthan");
+          }}
+        >
           <div className="trendingDestinationsText2">
             <span>Jaipur</span>
             <span>

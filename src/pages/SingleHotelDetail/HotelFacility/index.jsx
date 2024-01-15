@@ -7,13 +7,13 @@ import {
   FacilityTypeNameArray3,
 } from "../../../Constant/constant";
 
-function HotelFacility() {
+function HotelFacility(props) {
   return (
     <div className="hotelFacilityContainer">
       <div className="hotelFacilityNameAndButton">
         <div className="hotelFacilityName">
           <div className="hotelFacilityNameBoldText">
-            Facilities of Hillside Resort Lonavala - Pawna - Mountain View
+            {`Facilities of ${props?.data?.name}`}
           </div>
           <div className="hotelFacilityNameLightText">
             Great facilities! Review score, 8.7

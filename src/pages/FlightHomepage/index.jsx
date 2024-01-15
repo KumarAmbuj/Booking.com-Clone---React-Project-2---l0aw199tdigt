@@ -1,6 +1,7 @@
 import FlightFooter from "../../Component/FlightFooter";
 
 import CompareAndBook from "./CompareAndBook";
+import FlightHomePageBanner from "./FlightHomePageBanner";
 import FlightWorldwide from "./FlightWorldwide";
 import FrequentlyAskedQuestions from "./FrequentlyAskedQuestions";
 import PopularFlights from "./PopularFlights";
@@ -12,6 +13,7 @@ function FlightHomepage() {
       <CompareAndBook />
       <PopularFlights />
       <TrendingCities />
+      <FlightHomePageBanner />
       <FlightWorldwide />
       <FrequentlyAskedQuestions />
 

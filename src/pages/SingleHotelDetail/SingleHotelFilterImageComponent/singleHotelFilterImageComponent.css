@@ -1,0 +1,28 @@
+.singleHotelFilterImageContainer{
+    display: flex;
+    margin-top: 30px;
+    display: flex;
+}
+.singleHotelFilter{
+    flex:1;
+}
+.singleHotelImage{
+    flex:3;
+}
+
+.topFacilities{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap:10px;
+}
+.topFacilitiesContent{
+    height: 60px;
+    border: 1px solid rgb(201, 196, 196);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px 0 20px;
+}

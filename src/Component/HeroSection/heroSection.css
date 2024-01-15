@@ -10,7 +10,7 @@
 }
 .heroSectionText1{
     position:absolute;
-    left:5%;
+    left:10%;
     top:15%;
     font-size: 54px;
     font-weight: 700;
@@ -20,7 +20,7 @@
 
 .heroSectionText2{
     position:absolute;
-    left:5%;
+    left:10%;
     top:32%;
     font-size: 54px;
     font-weight: 700;
@@ -30,7 +30,7 @@
 }
 .heroSectionText3{
     position:absolute;
-    left:5%;
+    left:10%;
     top:52%;
     font-size: 24px;
     font-weight: 500;
@@ -40,7 +40,7 @@
 }
 .exploreButton{
     position: absolute;
-    left:5%;
+    left:10%;
     top:67%;
 }
 .exploreButton button{

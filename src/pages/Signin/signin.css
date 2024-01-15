@@ -1,0 +1,87 @@
+
+.registerNavbar{
+    height:75px;
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #003b95;
+
+}
+
+.registerLogoIcon{
+    width:80%;
+    height: 40px;
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.registerLogo{
+    font-size: 20px;
+    font-weight: 700;
+    color:rgb(243, 239, 239);
+    
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    
+}
+.registerIcon{
+    display: flex;
+    gap:20px;
+}
+.registerContainer{
+    width:420px;
+    margin: 20px auto;
+    /* height: 200px; */
+    /* outline: 1px solid red; */
+}
+.registerHeaderText{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    margin-top: 20px;
+}
+.registerInputBox{
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+.registerInputBox input{
+    width: 92%;
+    padding:10px;
+    border: 1px solid rgb(150, 148, 148);
+    border-radius: 5px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    margin-bottom: 10px;
+}
+.registerInputText{
+    margin-bottom: 5px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+   font-size: 16px;
+   font-weight: 600;
+
+}
+.registerButton{
+    margin-top: 10px;
+}
+.registerButton button{
+   width:96%;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #006ce4;
+   
+   color: white;
+   font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+   font-size: 18px;
+   font-weight: 600;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+}
+@media only screen and (max-width: 460px) {
+    .registerContainer{
+        width: 95%;
+    }
+}

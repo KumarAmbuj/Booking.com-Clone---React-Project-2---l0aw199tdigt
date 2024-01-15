@@ -5,7 +5,7 @@ import FlightCheapestComponent from "../FlightCheapestComponent";
 import FlightFastestComponent from "../FlightFastestComponent";
 import FlightFilterComponent from "../FlightFilterComponent";
 
-function SingleFlightDetailsFilterAndFlight() {
+function SingleFlightDetailsFilterAndFlight(props) {
   const [flightType, setFlightType] = useState(1);
   function handleClick(val) {
     setFlightType(val);
@@ -38,9 +38,9 @@ function SingleFlightDetailsFilterAndFlight() {
           </button>
         </div>
 
-        {flightType === 1 && <FlightBestComponent />}
-        {flightType === 2 && <FlightCheapestComponent />}
-        {flightType === 3 && <FlightFastestComponent />}
+        {flightType === 1 && <FlightBestComponent data={props.data} />}
+        {flightType === 2 && <FlightCheapestComponent data={props.data} />}
+        {flightType === 3 && <FlightFastestComponent data={props.data} />}
       </div>
     </div>
   );
