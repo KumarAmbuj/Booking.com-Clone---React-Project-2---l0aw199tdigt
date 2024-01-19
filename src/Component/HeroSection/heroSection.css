@@ -58,7 +58,79 @@
     color: white;
 
 }
-
+.heroSectionSearchContainer{
+    position: absolute;
+    /* height: 50px; */
+    
+    bottom: -35px;
+    left:10%;
+    width: 80%;
+    margin: auto;
+    z-index: 4;
+    display: flex;
+    gap:5px;
+    padding:5px;
+    border-radius: 5px;
+    background-color: #febb02;
+    
+}
+.heroSectionSearchPlace{
+    flex:1.2;
+    /* outline: 1px solid red; */
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding:5px 15px;
+}
+.heroSectionSearchPlace input{
+    height: 100%;
+    width: 70%;
+    margin-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 600;
+}
+.heroSectionSearchDate{
+    flex:1;
+    /* outline: 1px solid red; */
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding:5px 15px;
+}
+.heroSectionSearchPeople{
+    flex:1;
+    /* outline: 1px solid red; */
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding:5px 15px;
+}
+.heroSectionSearchButton{
+    flex:0.5;
+    /* outline: 1px solid red; */
+    height: 50px;
+    border-radius: 5px;
+    
+    background-color: #006ce4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: white;
+    padding: 5px 0;
+}
 
 @media only screen and (max-width: 800px) {
     .heroSectionText1{
@@ -87,5 +159,73 @@
         font-weight: 600;
         border-radius: 5px;
         cursor: pointer;
+    }
+    
+}
+@media only screen and (max-width: 900px) {
+
+
+    .heroSectionSearchContainer{
+        position: absolute;
+        /* height: 50px; */
+        
+        bottom: -25px;
+        left:2%;
+        width: 90%;
+        margin: auto;
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
+        gap:5px;
+        
+        
+        
+    }
+    .heroSectionSearchPlace{
+        flex:1;
+        /* outline: 1px solid red; */
+        height: 60px;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+    }
+    .heroSectionSearchPlace input{
+        height: 100%;
+        width: 70%;
+        margin-left: 10px;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-weight: 600;
+    }
+    .heroSectionSearchDate{
+        flex:1;
+        /* outline: 1px solid red; */
+        height: 60px;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+    }
+    .heroSectionSearchPeople{
+        flex:1;
+        /* outline: 1px solid red; */
+        height: 60px;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+    }
+    .heroSectionSearchButton{
+        flex:1;
+        /* outline: 1px solid red; */
+        height: 60px;
+        border-radius: 5px;
+        
     }
 }

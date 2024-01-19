@@ -57,7 +57,7 @@ function SingleHotelImageComponent(props) {
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-thumbs-up" style={{ marginLeft: "20px" }}></i>
+            <i class="fa fa-thumbs-up" style={{ marginLeft: "10px" }}></i>
             <button>Airport shuttle</button>
           </div>
           <div className="singleHotelBoldText">{props.data?.name}</div>

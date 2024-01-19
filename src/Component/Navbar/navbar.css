@@ -26,6 +26,9 @@
     align-items: center;
     font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
+.navbarLogo a{
+    color:rgb(243, 239, 239);
+}
 .navbarIcon{
     display: flex;
     align-items: center;
@@ -95,7 +98,7 @@
     height: 50px;
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    
     
 
 }
@@ -118,7 +121,7 @@
     height: 50px;
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    
 
 }
 .navbarSigninButton button{
@@ -177,6 +180,17 @@
     border-radius: 25px;
     background-color: #034ebe;
 }
+
+/* .navbarSearchContainer{
+    position: absolute;
+    height: 50px;
+    outline: 1px solid red;
+    bottom: -15px;
+    left:0;
+    width: 100%;
+    z-index: 4;
+
+} */
 
 @media only screen and (max-width: 1200px){
     .navbarLogoAndIcon{

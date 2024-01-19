@@ -1,0 +1,213 @@
+.flightModalContainer{
+    position: fixed;
+    height:100vh;
+    width:100vw;
+    z-index: 8;
+    outline: 2px solid red;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.6);
+    overflow-y: scroll;
+}
+.flightModalContent{
+    width: 55%;
+    /* height: 80%; */
+    margin: 2% auto;
+    /* outline: 1px solid red; */
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    overflow-y:visible;
+   
+}
+.flightModalHeaderCrossButton{
+    display: flex;
+    justify-content: space-between;
+}
+.flightModalHeaderText{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.flightModalCrossButton{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.flightModalCrossButton i{
+    font-size: 20px;
+    font-weight: 100;
+}
+.flightModalCrossButton:hover{
+    background-color: rgb(235, 230, 230);
+}
+.flightToHeaderContainer{
+    margin-top: 50px;
+}
+.flightToBoldText{
+    
+    font-size: 18px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.flightToLightText{
+    font-size: 16px;
+    color:grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.flightFromToTextImageFlex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.flightFromToText{
+    display: flex;
+    gap:16px
+}
+.flightFromToCircle{
+    height: 13px;
+    width: 13px;
+    border: 3px solid grey;
+    border-radius: 50%;
+}
+.flightFromToDetailLightText{
+    font-size: 14px;
+    color:grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.flightFromToDetailBoldText{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.flightFromToImage{
+    display: flex;
+    gap:15px;
+    width: 200px;
+    padding-right: 50px;
+}
+.flightFromToImageText{
+    font-size: 14px;
+    color:grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.modalBorderLine{
+    margin-top: 30px;
+    border: 1px solid rgb(212, 209, 209);
+}
+.modalBaggageFlex{
+    display: flex;
+    margin-top: 20px;
+}
+.modalBaggageInclude{
+    flex:1;
+    padding-right: 20px;
+}
+.modalBaggageDetail{
+    flex:2.3;
+    border-left: 1px solid rgb(218, 215, 215);
+    padding-left: 20px;
+    
+}
+.modalBaggageIncludeBoldText{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.modalBaggageIncludeLightText{
+    font-size: 16px;
+    color:grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.modalBaggageDetailFromText{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.modalBaggageDetailImageTextFlex{
+    margin-top: 15px;
+    display: flex;
+    gap:20px;
+}
+.modalBaggageDetailText{
+    font-size: 16px;
+    color:rgb(59, 59, 59);
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.geniusContainer{
+    margin-top: 20px;
+    border: 1px solid rgb(226, 223, 223);
+    border-radius: 10px;
+    padding: 20px 15px;
+    display: flex;
+}
+.geniusText{
+    flex:4;
+}
+.geniusImage{
+    flex:1;
+    
+}
+.geniusImage img {
+    height: 90px;
+}
+
+.geniusTextButton{
+    display: flex;
+    gap:5px;
+    align-items: center;
+}
+.tripSaving{
+    margin-top: -5px;
+    font-size: 14px;
+    color:rgb(131, 128, 128);
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.geniusBoldText{
+    margin-top: -5px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.geniusLightText{
+    
+    font-size: 16px;
+    color:grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.flightModalPriceButton{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.flightModalPriceBoldText{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.flightModalPriceLightText{
+    margin-top: 10px;
+    font-size: 13px;
+    color:grey;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.flightModalButton button{
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    background-color: blue;
+    color:white;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 800px) {
+    .flightModalContent{
+        width: 80%;
+    }
+}

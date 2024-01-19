@@ -636,14 +636,14 @@ export const QuickBeachArray = [
     text: "546 km away ",
     location: "Kanpur, Uttar Pradesh",
     image:
-      "https://r-xx.bstatic.com/xdata/images/region/170x136/49646.jpg?k=b7f38878b9164ee38e0b99c4d4646dbea76b7bf4add8464b1aa75e4c9d0efc6e&o=",
+      "https://cf.bstatic.com/xdata/images/xphoto/300x240/140018231.jpg?k=52f92f7b5e08f01873d6663e8967c2104e269d308b7f8b6f73cb79e413149d72&o=",
   },
   {
     name: "Nagpur",
     text: "578 km away ",
     location: "Nagpur, Maharashtra",
     image:
-      "https://r-xx.bstatic.com/xdata/images/region/170x136/49646.jpg?k=b7f38878b9164ee38e0b99c4d4646dbea76b7bf4add8464b1aa75e4c9d0efc6e&o=",
+      "https://cf.bstatic.com/xdata/images/xphoto/300x240/140018331.jpg?k=5a3df4ef660a744468a05ae6c1e3e85f638c3662e546c2816a67e4975bc12169&o=",
   },
 ];
 
@@ -1522,3 +1522,27 @@ export const FlightWorldwideSouthAmericaArray = [
       "https://q-cf.bstatic.com/xdata/images/city/square100/644363.jpg?k=d7dfbc64880d52cf00797f6a0e34568e4d25fc913a719a721a06832b5c5a9308&o=",
   },
 ];
+
+export const FlightCode = {
+  TRV: "Thiruvananthapuram",
+  GAU: "Guwahati",
+  BLR: "Bangalore",
+  DEL: "Delhi",
+  BOM: "Mumbai",
+  MAA: "Chennai",
+  HYD: "Hyderabad",
+  CCU: "Kolkata",
+  COK: "Kochi",
+  AMD: "Ahmedabad",
+  PNQ: "Pune",
+  GOI: "Goa",
+  PAT: "Patna",
+  IXC: "Chandigarh",
+  IXE: "Mangalore",
+  NAG: "Nagpur",
+  BBI: "Bhubaneshwar",
+  JAI: "Jaipur",
+  CJB: "Coimbatore",
+  IXM: "Madurai",
+  LKO: "Lucknow",
+};

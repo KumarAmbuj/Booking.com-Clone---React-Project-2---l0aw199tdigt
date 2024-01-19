@@ -1,20 +1,28 @@
 import "./navbar.css";
 import HideNavigation from "./HideNavigation";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../authentication/AuthContext";
 
 function Navbar() {
+  const { login, logout, isLoggedIn } = useContext(AuthContext);
   const [hideNavigation, setHideNavigation] = useState(false);
 
   function ShowHidedNavigation() {
     setHideNavigation(!hideNavigation);
   }
 
+  function handleLogout() {
+    logout();
+  }
+
   return (
     <>
       <div className="navbar">
         <div className="navbarLogoAndIcon">
-          <div className="navbarLogo">Booking.com</div>
+          <div className="navbarLogo">
+            <Link to="/">Booking.com</Link>
+          </div>
           <div className="navbarIcon">
             <div className="INR">INR</div>
             <div className="indianFlag">
@@ -24,12 +32,25 @@ function Navbar() {
               <i class="fa fa-question-circle"></i>
             </div>
             <div className="listYourProperty">List your property</div>
-            <div className="navbarRegisterButton">
-              <button>Register</button>
-            </div>
-            <div className="navbarSigninButton">
-              <button>Sign in</button>
-            </div>
+
+            {!isLoggedIn ? (
+              <>
+                <div className="navbarRegisterButton">
+                  <Link to="/register">
+                    <button>Register</button>
+                  </Link>
+                </div>
+                <div className="navbarSigninButton">
+                  <Link to="/signin">
+                    <button>Sign in</button>
+                  </Link>
+                </div>
+              </>
+            ) : (
+              <div className="navbarRegisterButton">
+                <button onClick={handleLogout}>Logout</button>
+              </div>
+            )}
 
             <div className="userIcon">
               <i class="fa fa-user-circle"></i>
@@ -37,7 +58,7 @@ function Navbar() {
 
             <div className="userIcon">
               <i
-                class="fa fa-bars"
+                className="fa fa-bars"
                 aria-hidden="true"
                 onClick={ShowHidedNavigation}
               ></i>
@@ -80,6 +101,8 @@ function Navbar() {
             </button>
           </Link>
         </div>
+
+        {/**Search component */}
       </div>
       {hideNavigation ? <HideNavigation onclick={ShowHidedNavigation} /> : ""}
     </>

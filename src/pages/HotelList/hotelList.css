@@ -27,6 +27,24 @@
     font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
     padding-left: 10px;
 }
+.HotelListFilterBox{
+    margin-left: 15px;
+    margin-top: 20px;
+    padding:10px 14px;
+    border:1px solid grey;
+    border-radius: 30px;
+    display: inline-block;
+    
+    
+    font-size: 16px;
+    font-weight: 600;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    cursor: pointer;
+    position: relative;
+}
+.HotelListFilterBox:hover{
+    background-color: rgb(243, 241, 241);
+}
 .HotelsContainer{
     flex:3;
     /* outline: 1px solid red; */
@@ -46,5 +64,8 @@
 @media only screen and (max-width: 767px) {
     .hotelListContainer{
         width: 100%;
+    }
+    .FilterHotels{
+        display: none;
     }
 }

@@ -16,9 +16,12 @@
     font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
     margin-left: 10%;
 }
-.registerSignin{
+.flightLogo a{
+    color:rgb(243, 239, 239);
+}
+.flightRegisterSignin{
     display: flex;
-    margin-right: 10%;
+    margin-right: 5%;
 }
 .flagIcon{
     height: 50px;
@@ -52,24 +55,58 @@
     font-size: 24px;
     color: white;
 }
-.flightNavbarButtons{
+.flightNavbarRegisterButton{
+    height: 50px;
     display: flex;
-    gap:10px;
+    align-items: center;
+    
+    
+
+}
+.flightNavbarRegisterButton:hover{
+    background-color: #034ebe;
 }
 
-.flightNavbarButtons button{
+.flightNavbarRegisterButton button{
+    padding:10px 15px;
     border: none;
-    height: 40px;
-    padding: 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    outline: none;
     background-color: white;
-    color: #003b95;
-    font-size: 16px;
+    color:blue;
+    font-size: 14px;
+    border-radius: 5px;
     font-weight: 600;
-    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    border-radius: 3px;
     cursor: pointer;
-    
+}
+.flightNavbarSigninButton{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+}
+.flightNavbarSigninButton button{
+    padding:10px 15px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color:blue;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.flightNavbarSigninButton:hover{
+    background-color: #034ebe;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .flightNavbarRegisterButton{
+        display: none;
+    }
+    .flightNavbarSigninButton{
+        display: none;
+    }
+
 }

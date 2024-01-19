@@ -12,9 +12,9 @@ function Regions() {
   return (
     <div className="regionContainer">
       <div className="regionChild">
-        {RegionArray1.map((val) => {
+        {RegionArray1.map((val, index) => {
           return (
-            <div className="RegionLinkProperties">
+            <div className="RegionLinkProperties" key={index}>
               <div className="RegionLink">{val.name}</div>
               <div className="RegionProperties">{val.property}</div>
             </div>
@@ -22,9 +22,9 @@ function Regions() {
         })}
       </div>
       <div className="regionChild">
-        {RegionArray2.map((val) => {
+        {RegionArray2.map((val, index) => {
           return (
-            <div className="RegionLinkProperties">
+            <div className="RegionLinkProperties" key={index}>
               <div className="RegionLink">{val.name}</div>
               <div className="RegionProperties">{val.property}</div>
             </div>
@@ -32,9 +32,9 @@ function Regions() {
         })}
       </div>
       <div className="regionChild">
-        {RegionArray3.map((val) => {
+        {RegionArray3.map((val, index) => {
           return (
-            <div className="RegionLinkProperties">
+            <div className="RegionLinkProperties" key={index}>
               <div className="RegionLink">{val.name}</div>
               <div className="RegionProperties">{val.property}</div>
             </div>
@@ -42,9 +42,9 @@ function Regions() {
         })}
       </div>
       <div className="regionChild">
-        {RegionArray4.map((val) => {
+        {RegionArray4.map((val, index) => {
           return (
-            <div className="RegionLinkProperties">
+            <div className="RegionLinkProperties" key={index}>
               <div className="RegionLink">{val.name}</div>
               <div className="RegionProperties">{val.property}</div>
             </div>
@@ -52,9 +52,9 @@ function Regions() {
         })}
       </div>
       <div className="regionChild">
-        {RegionArray5.map((val) => {
+        {RegionArray5.map((val, index) => {
           return (
-            <div className="RegionLinkProperties">
+            <div className="RegionLinkProperties" key={index}>
               <div className="RegionLink">{val.name}</div>
               <div className="RegionProperties">{val.property}</div>
             </div>

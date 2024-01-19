@@ -1,0 +1,34 @@
+.registerNavbar{
+    height:75px;
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #003b95;
+
+}
+
+.registerLogoIcon{
+    width:80%;
+    height: 40px;
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.registerLogo{
+    font-size: 20px;
+    font-weight: 700;
+    color:rgb(243, 239, 239);
+    
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    
+}
+.registerLogo a{
+    color:white
+}
+.registerIcon{
+    display: flex;
+    gap:20px;
+}

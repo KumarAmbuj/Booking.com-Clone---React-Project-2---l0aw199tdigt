@@ -12,13 +12,13 @@
 .singleHotelTopButtons button{
     display: flex;
     justify-content: center;
-    width: 100%;
+    /* width: 100%; */
     outline: none;
     border: none;
     background-color: white;
-    padding: 20px 0;
+    padding: 20px 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .singleHotelTopButtons button:hover{
