@@ -48,6 +48,12 @@
     font-size: 20px;
 
 }
+.filterInputBox select{
+    margin-left: 10px;
+    width: 80%;
+    outline: none;
+    border: none;
+}
 .filterInputBox input{
     height:90%;
     width:80%;
@@ -79,4 +85,5 @@
     outline: none;
     background-color: #0071c2;
     color: white;
+    cursor: pointer;
 }

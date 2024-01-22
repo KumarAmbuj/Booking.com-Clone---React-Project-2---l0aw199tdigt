@@ -96,6 +96,7 @@ function FlightSingleComponent(props) {
         <SingleFlightModalComponent
           onclick={handleModalHide}
           id={props?.data?._id}
+          data={props.data}
         />
       ) : (
         ""

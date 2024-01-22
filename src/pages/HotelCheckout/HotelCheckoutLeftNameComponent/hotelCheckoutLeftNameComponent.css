@@ -1,0 +1,53 @@
+.hotelNameContainer{
+    padding: 10px 15px;
+    border: 1px solid rgb(223, 219, 219);
+    border-radius: 10px;
+
+ }
+ .hotelTopNameText{
+    font-size: 14px;
+    color:rgb(88, 87, 87);
+    display: flex;
+    gap:10px;
+    align-items: center;
+ }
+ .hotelNameTextBold{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 5px;
+ }
+ .hotelAddressLightText{
+    font-size: 16px;
+    color:rgb(61, 60, 60);
+    margin-top: 10px;
+ }
+ .hotelCheckoutRatingAndReview{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap:10px;
+ }
+ .hotelCheckoutRatingAndReview button{
+    border: none;
+    outline: none;
+    padding:7px 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: blue;
+    color:white;
+    font-size: 12px;
+ }
+ .hotelCheckoutRatingAndReview span{
+    font-size: 12px;
+    color:rgb(71, 70, 70);
+ }
+ .hotelCheckoutNameFacility{
+    margin-top: 7px;
+    display: flex;
+    gap:7px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color:rgb(71, 70, 70);
+ }

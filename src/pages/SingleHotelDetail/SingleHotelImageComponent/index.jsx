@@ -59,11 +59,27 @@ function SingleHotelImageComponent(props) {
             <i class="fa fa-star" aria-hidden="true"></i>
             <i class="fa fa-thumbs-up" style={{ marginLeft: "10px" }}></i>
             <button>Airport shuttle</button>
+
+            <div className="sustainableLeaf">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 72 24"
+                height={"13px"}
+                width={"50px"}
+              >
+                <path
+                  fill={"green"}
+                  d="M16.29 19.72c4.22-4.22 8.4-17.56 6.7-19.26S7.95 2.93 3.73 7.16C.67 10.22.62 15.58 3.5 18.98L15.62 6.86c.29-.29.77-.29 1.06 0s.29.77 0 1.06L4.57 20.03l-2.14 2.14c-.29.29-.29.77 0 1.06s.77.29 1.06 0l2.34-2.34c3.34 1.88 7.78 1.51 10.46-1.17ZM40.29 19.72c4.23-4.23 8.41-17.56 6.7-19.26s-15.04 2.48-19.26 6.7c-3.06 3.06-3.11 8.42-.23 11.82L39.62 6.86c.29-.29.77-.29 1.06 0s.29.77 0 1.06L28.57 20.03l-2.14 2.14c-.29.29-.29.77 0 1.06s.77.29 1.06 0l2.34-2.34c3.34 1.88 7.78 1.51 10.46-1.17ZM64.29 19.72c4.23-4.23 8.41-17.56 6.7-19.26s-15.04 2.48-19.26 6.7c-3.06 3.06-3.11 8.42-.23 11.82L63.62 6.86c.29-.29.77-.29 1.06 0s.29.77 0 1.06L52.57 20.03l-2.14 2.14c-.29.29-.29.77 0 1.06s.77.29 1.06 0l2.34-2.34c3.34 1.88 7.78 1.51 10.46-1.17Z"
+                ></path>
+              </svg>
+              <span className="sustainableText">
+                Travel Sustainable Level {Math.floor(props?.data?.rating)}
+              </span>
+            </div>
           </div>
           <div className="singleHotelBoldText">{props.data?.name}</div>
           <div className="singleHotelLightText">
-            1 & 2 Ring Road, Lajpat Nagar, 110024 New Delhi, India Great
-            location - show map Metro access
+            {props.data?.location}, India Great location - show map Metro access
           </div>
         </div>
         <div className="singleHotelButtons">

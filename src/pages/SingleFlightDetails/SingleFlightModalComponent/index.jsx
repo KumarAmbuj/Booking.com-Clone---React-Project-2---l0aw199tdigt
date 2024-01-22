@@ -1,10 +1,12 @@
 import "./singleFlightModalComponent.css";
 import { useEffect, useState } from "react";
 import { FlightCode } from "../../../Constant/constant";
+import { useNavigate } from "react-router-dom";
 
 function SingleFlightModalComponent(props) {
   const { id } = props;
   const [singleFlightData, setSingleFlightData] = useState({});
+  const navigate = useNavigate();
   //console.log(id);
   async function getSinleFlightDetail() {
     try {
@@ -25,7 +27,7 @@ function SingleFlightModalComponent(props) {
       if (resultResponse.message === "success") {
         //setMessage(resultResponse);
         setSingleFlightData(resultResponse?.data);
-        console.log(singleFlightData);
+        //console.log(singleFlightData);
       } else {
         //setMessage(resultResponse);
         //navigate("/register");
@@ -41,6 +43,11 @@ function SingleFlightModalComponent(props) {
   useEffect(() => {
     getSinleFlightDetail();
   }, []);
+
+  function handleToNavigate() {
+    navigate("/flight-checkout", { state: { singleFlightData } });
+    //console.log("heyyy");
+  }
 
   return (
     <div className="flightModalContainer">
@@ -285,7 +292,7 @@ function SingleFlightModalComponent(props) {
             </div>
           </div>
           <div className="flightModalButton">
-            <button>Select</button>
+            <button onClick={handleToNavigate}>Select</button>
           </div>
         </div>
       </div>

@@ -1,5 +1,21 @@
 import "./singleHotelFilterComponent.css";
+import { HotelListArray } from "../../../Constant/constant";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 function SingleHotelFilterComponent() {
+  const navigate = useNavigate();
+  const [searchCity, setSearchCity] = useState("");
+  function handleSearchSelect(e) {
+    setSearchCity(e.target.value);
+  }
+
+  function handleSearch() {
+    if (searchCity.length > 0) {
+      navigate(`/hotel-list/${searchCity}`);
+    }
+  }
+
   return (
     <div className="singleHotelFilterContainer">
       <div className="hotelFilterBadge">
@@ -12,7 +28,16 @@ function SingleHotelFilterComponent() {
         <div className="destinationText">Destination/property name:</div>
         <div className="filterInputBox">
           <i class="fa fa-search"></i>
-          <input type="text" />
+          <select onChange={handleSearchSelect}>
+            <option>Select city</option>
+            {HotelListArray.map((val, index) => {
+              return (
+                <option value={val.location} key={index}>
+                  {val.name}
+                </option>
+              );
+            })}
+          </select>
         </div>
 
         <div className="destinationText">Check-in-date:</div>
@@ -53,7 +78,7 @@ function SingleHotelFilterComponent() {
         </div>
 
         <div className="filterButton">
-          <button>Search</button>
+          <button onClick={handleSearch}>Search</button>
         </div>
       </div>
     </div>

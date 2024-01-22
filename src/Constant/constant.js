@@ -1223,6 +1223,27 @@ export const BrowsePropertySliderArray = [
   },
 ];
 
+export const HotelListArray = [
+  { name: "Delhi", location: "Delhi, National Capital Territory of Delhi" },
+  { name: "Chennai", location: "Chennai, Tamil Nadu" },
+  { name: "Ahmedabad", location: "Ahmedabad, Gujarat" },
+  { name: "Hyderabad", location: "Hyderabad, Telangana" },
+  { name: "Jaipur", location: "Jaipur, Rajasthan" },
+  { name: "Bangalore", location: "Bangalore, Karnataka" },
+  { name: "Pune", location: "Pune, Maharashtra" },
+  { name: "Kolkata", location: "Kolkata, West Bengal" },
+  { name: "Surat", location: "Surat, Gujarat" },
+  { name: "Lucknow", location: "Lucknow, Uttar Pradesh" },
+  { name: "Kanpur", location: "Kanpur, Uttar Pradesh" },
+  { name: "Nagpur", location: "Nagpur, Maharashtra" },
+  { name: "Mumbai", location: "Mumbai, Maharashtra" },
+  { name: "Lucknow", location: "Lucknow, Uttar Pradesh" },
+  { name: "Bhopal", location: "Bhopal, Madhya Pradesh" },
+  { name: "Patna", location: "Patna, Bihar" },
+  { name: "VisakhaPatanam", location: "Visakhapatnam, Andhra Pradesh" },
+  { name: "Allahabad", location: "Allahabad, Uttar Pradesh" },
+];
+
 export const FlightWorldwideAsiaArray = [
   {
     name: "Mumbai to New Delhi",
@@ -1546,3 +1567,27 @@ export const FlightCode = {
   IXM: "Madurai",
   LKO: "Lucknow",
 };
+
+export const FlightCodeArray = [
+  { city: "Delhi", code: "DEL" },
+  { city: "Mumbai", code: "BOM" },
+  { city: "Chennai", code: "MAA" },
+  { city: "Hyderabad", code: "HYD" },
+  { city: "Kolkata", code: "CCU" },
+  { city: "Kochi", code: "COK" },
+  { city: "Ahmedabad", code: "AMD" },
+  { city: "Pune", code: "PNQ" },
+  { city: "Goa", code: "GOI" },
+  { city: "Patna", code: "PAT" },
+  { city: "Chandigarh", code: "IXC" },
+  { city: "Mangalore", code: "IXE" },
+  { city: "Nagpur", code: "NAG" },
+  { city: "Bhubaneshwar", code: "BBI" },
+  { city: "Jaipur", code: "JAI" },
+  { city: "Coimbatore", code: "CJB" },
+  { city: "Madurai", code: "IXM" },
+  { city: "Lucknow", code: "LKO" },
+  { city: "Thiruvananthapuram", code: "TRV" },
+  { city: "Guwahati", code: "GAU" },
+  { city: "Bangalore", code: "BLR" },
+];

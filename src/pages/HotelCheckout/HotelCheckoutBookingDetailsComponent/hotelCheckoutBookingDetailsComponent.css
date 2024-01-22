@@ -1,0 +1,63 @@
+.hotelCheckoutBookingDetailsContainer{
+    padding: 10px 20px;
+    border: 1px solid rgb(223, 219, 219);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.yourBookingText{
+    font-size: 18px;
+    font-weight: 700;
+}
+.checkinCheckoutFlex{
+    display: flex;
+    margin-top: 20px;
+}
+.chekcinBox{
+    padding-right: 20px;
+    border-right: 1px solid rgb(223, 219, 219);
+}
+.checkoutBox{
+    padding-left: 15px;
+    
+}
+.checkinText{
+    font-size: 16px;
+    color: rgb(15, 15, 15);
+    font-weight: 500;
+    
+}
+.checkinDateText{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.checkinTimeText{
+    font-size: 16px;
+    color:rgb(88, 88, 88);
+    
+}
+.totalStayText{
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgb(15, 15, 15);
+    font-weight: 500;
+}
+.oneNightText{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 7px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(226, 224, 224);
+}
+.youSelectedText{
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgb(15, 15, 15);
+    font-weight: 500;
+}
+.roomNumber{
+    margin-top: 10px;
+    font-size: 18px;
+    
+    font-weight: 700;
+}

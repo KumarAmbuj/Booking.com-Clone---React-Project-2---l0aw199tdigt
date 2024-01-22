@@ -1,0 +1,30 @@
+.comfortDoubleContainer{
+    padding:15px;
+    border: 1px solid rgb(223, 219, 219);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.comfortBoxFlex{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-size: 16px;
+    margin-top: 10px;
+    
+}
+.comfortDoubleButtons{
+    display: flex;
+    gap:5px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.comfortDoubleButtonsBox{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap:5px;
+    background-color: #e7fde9;
+    border: 1px solid rgb(102, 252, 102);
+    padding: 1px 4px;
+    border-radius: 5px;
+}

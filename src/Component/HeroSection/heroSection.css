@@ -114,6 +114,13 @@
     align-items: center;
     padding:5px 15px;
 }
+ .heroSectionSearchPlace select{
+    outline: none;
+    border: none;
+    margin-left: 15px;
+    width: 95%;
+    font-size: 16px;
+}
 .heroSectionSearchButton{
     flex:0.5;
     /* outline: 1px solid red; */
@@ -191,6 +198,7 @@
         align-items: center;
         padding-left: 15px;
     }
+   
     .heroSectionSearchPlace input{
         height: 100%;
         width: 70%;

@@ -1,0 +1,17 @@
+.goodToKnowBox{
+    padding:15px;
+    border: 1px solid rgb(223, 219, 219);
+    border-radius: 10px;
+    margin-top: 20px;
+ }
+.goodToKnowBoldText{
+    font-size: 20px;
+    font-weight: 700;
+}
+.goodToKnowLightText{
+    margin-top: 15px;
+    font-size: 16px;
+    color: rgb(80, 78, 78);
+    display: flex;
+    gap:20px;
+}

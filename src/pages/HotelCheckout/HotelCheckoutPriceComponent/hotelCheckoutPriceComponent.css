@@ -1,0 +1,47 @@
+.hotelCheckoutPriceContainer{
+    margin-top: 20px;
+    padding: 10px 0px;
+    border: 1px solid rgb(223, 219, 219);
+    border-radius: 10px;
+}
+.hotelCheckoutPriceSmmaryText{
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 20px;
+}
+.hotelCheckoutPriceBox{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(209, 236, 236);
+    padding: 20px 20px 15px 20px;
+}
+.hotelCheckoutPriceBoldText{
+    font-size: 24px;
+    font-weight: 700;
+    text-align:end;
+}
+.hotelCheckoutPriceLightText{
+    font-size: 14px;
+    color:rgb(27, 27, 27);
+}
+.priceInfo{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 20px;
+}
+.imageAndTaxFlex{
+    padding: 0 20px;
+    margin-top: 20px;
+    display: flex;
+    gap:20px;
+    font-size: 16px;
+    color:rgb(5, 5, 5);
+}
+.taxPriceFlex{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,5 +1,6 @@
 .singleHotelImageContainer{
     margin-top: 0px;
+    overflow-x: hidden;
 }
 .singleHotelTopButtons{
     display: flex;
@@ -87,7 +88,12 @@
 .singleHotelLowerButton button:hover{
     background-color: #d3e7f5;
 }
-
+.singleHotelStarIcon{
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    
+}
 .singleHotelStarIcon i{
     margin-left:4px;
     color: #febb02;
@@ -117,13 +123,24 @@
     flex:1
 }
 .singleHotelImageBoxLeft img{
+    width: 100%;
+    
+    
+    object-fit: cover;
     max-height: 12rem;
-}
+} 
 .singleHotelImageBoxRight{
     flex:2;
+   
+    
 }
 .singleHotelImageBoxRight img{
-    max-height: 24rem;
+    width: 100%;
+    height: 24rem;
+    object-fit: cover;
+    
+
+    
 }
 .singleHotelLowerImageBox{
     display: flex;
@@ -134,3 +151,18 @@
     object-fit: cover;
     max-height: 130px;
 }
+
+/* @media only screen and (max-width: 800px) {
+    .singleHotelImageBoxLeft{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .singleHotelImageBoxRight{
+        display: none;
+    }
+    .singleHotelLowerImageBox{
+        display: none;
+    }
+} */

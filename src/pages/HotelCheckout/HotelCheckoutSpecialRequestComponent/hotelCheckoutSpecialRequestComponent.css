@@ -1,0 +1,27 @@
+.specialRequestContainer{
+    padding:15px;
+    border: 1px solid rgb(223, 219, 219);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.specialRequestBoldText{
+    font-size: 20px;
+    font-weight: 700;
+}
+.specialRequestLightText{
+    font-size: 16px;
+    margin-top: 20px;
+}
+.specialRequestInputBox{
+    margin-top: 20px;
+}
+.specialRequestInputBoxBoldText{
+    font-size: 16px;
+    font-weight: 700;
+}
+.specialRequestInputBox input{
+    height: 100px;
+    width: 100%;
+    border: 1px solid rgb(180, 177, 177);
+    border-radius: 10px;
+}

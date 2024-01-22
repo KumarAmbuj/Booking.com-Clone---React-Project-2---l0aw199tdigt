@@ -1,0 +1,16 @@
+.hotelCheckoutPaymentContainer{
+    padding: 10px 20px;
+    border: 1px solid rgb(223, 219, 219);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.paymentSchedule{
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    
+}
+.paymentScheduleLightText{
+    margin-top: 15px;
+    font-size: 16px;
+}

@@ -1,5 +1,21 @@
 import "./singleHotelDetailAvailabilityComponent.css";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../authentication/AuthContext";
+import { useContext } from "react";
+
 function SingleHotelDetailAvailabilityComponent(props) {
+  const { isLoggedIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  function handleClick(val) {
+    if (isLoggedIn) {
+      navigate("/hotel-checkout", {
+        state: { hotelDetail: props.data, index: val },
+      });
+    } else {
+      navigate("/signin");
+    }
+  }
+
   return (
     <div className="availabilityContainer">
       <div className="availabilityHeader">Availability</div>
@@ -25,7 +41,13 @@ function SingleHotelDetailAvailabilityComponent(props) {
                 <i class="fa fa-user" aria-hidden="true"></i>
               </div>
               <div className="tableData3">
-                <button>Show prices</button>
+                <button
+                  onClick={() => {
+                    handleClick(index);
+                  }}
+                >
+                  Show prices
+                </button>
               </div>
             </div>
           );

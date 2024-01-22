@@ -50,6 +50,12 @@
     
     
 }
+.inputSearchFrom select{
+    height: 54px;
+    width:70%;
+    outline: none;
+    border: none;
+}
 .inputSearchTo{
     width: 27%;
     display: flex;
@@ -58,6 +64,12 @@
     box-sizing: border-box;
     border-radius: 5px;
     
+}
+.inputSearchTo select{
+    height: 54px;
+    width:70%;
+    outline: none;
+    border: none;
 }
 .inputSearchReturn{
     width: 27%;

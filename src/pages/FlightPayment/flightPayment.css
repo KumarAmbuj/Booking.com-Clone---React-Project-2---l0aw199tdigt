@@ -94,11 +94,13 @@
     margin-top: 20px;
     flex-wrap: wrap;
 }
-.formContainer{
+.paymentLeftContainer{
     flex:2;
-    padding: 20px;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    /* padding: 20px;
     border: 1px solid rgb(211, 208, 208);
-    border-radius: 10px;
+    border-radius: 10px; */
     /* height: 200px; */
 }
 .priceContainer{
@@ -226,8 +228,8 @@
     margin: 40px auto;
     gap:40px;
 }
-.flightCheckoutNextButton{
-    padding: 20px 60px;
+.flightPaymentNextButton{
+    padding: 20px 30px;
     font-size: 16px;
     font-weight: 700;
     background-color: blue;
@@ -253,14 +255,194 @@
 .flightCheckoutBackButton:hover{
     background-color: rgb(197, 241, 241);
 }
+
+.paymentFlightDetail{
+    display: flex;
+    gap:30px;
+   /* height: 100px; */
+   border: 1px solid rgb(228, 222, 222);
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+}
+.paymentFlightBoldText{
+    font-size: 14px;
+    font-weight: 700;
+    
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.paymentFlightLightText{
+    font-size: 16px;
+    color:grey;
+    margin-top: 5px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.paymentContactDetail{
+    border: 1px solid rgb(228, 222, 222);
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+.paymentContactLightText{
+    font-size: 16px;
+    color:grey;
+    
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.paymentBaggageDetail{
+    border: 1px solid rgb(228, 222, 222);
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+.formHeaderLightText{
+    font-size: 18px;
+    color:grey;
+    
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.paymentBaggageFromBoldText{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.paymentBaggageImageTextFlex{
+    margin-top: 10px;
+    display: flex;
+    gap:15px;
+    font-size: 16px;
+    color:rgb(68, 68, 68);
+    align-items: center;
+    
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.paymentLightText{
+    font-size: 13px;
+    color:rgb(53, 52, 52);
+    margin-top: 20px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.paymentFormContainer{
+    border: 1px solid rgb(228, 222, 222);
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+.payOptionsImage{
+    display: flex;
+    gap:10px;
+    margin-top: 10px;
+}
+.paymentOptiontext{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.paymentInputBox{
+    width: 50%;
+   height: 40px;
+   margin-top: 5px;
+}
+.paymentInputBox input{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid grey;
+    padding-left: 15px;
+}
+.paymentCardholderBox{
+    width: 50%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    padding-left: 15px;
+}
+.paymentCardholderBox input{
+    margin-left: 10px;
+    height: 80%;
+    width: 70%;
+    outline: none;
+    border: none;
+}
+.expiryDateCvc{
+    margin-top: 20px;
+    display: flex;
+    gap:20px;
+    /* height: 40px; */
+    width: 50%;
+}
+.paymentExpiryDate{
+   flex:1;
+   /* outline: 1px solid red; */
+   
+}
+.paymentCvc{
+    flex:1;
+    /* outline: 1px solid red; */
+}
+.expiryDateInputBox{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}
+.expiryDateInputBox input{
+    height: 80%;
+    width: 70%;
+    outline: none;
+    border: none;
+}
+.formBottomText{
+    font-size: 14px;
+    color:rgb(78, 78, 78);
+    margin-top: 20px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.feedbackBoldText{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 5px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.feedbackContainerTopText{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-size: 12px;
+    color:rgb(90, 89, 89);
+    
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
 @media only screen and (max-width: 1000px) {
     .flightCheckoutContainer{
         width: 100%;
     }
 }
 
-@media only screen and (max-width: 700px) {
-    .FormPriceFlexContainer{
-        flex-direction: column;
+@media only screen and (max-width: 800px) {
+    .paymentInputBox{
+        width: 90%;
+    }
+    .paymentCardholderBox{
+        width: 90%;
+    }
+    .expiryDateCvc{
+        width: 90%;
     }
 }

@@ -27,7 +27,7 @@ function SingleHotelDetail() {
       );
 
       const responseJson = await response.json();
-      console.log(responseJson);
+      //console.log(responseJson);
       if (responseJson.message === "success") {
         setHotelDetail(responseJson);
         // console.log(hotelListData);

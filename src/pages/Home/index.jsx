@@ -10,6 +10,10 @@ import SingleFlightDetails from "../SingleFlightDetails";
 import Register from "../Register";
 import Signin from "../Signin";
 import AuthProvider from "../../authentication/AuthProvider";
+import FlightCheckout from "../FlightCheckout";
+import FlightPayment from "../FlightPayment";
+import HotelCheckout from "../HotelCheckout";
+import HotelPayment from "../HotelPayment";
 
 function Home() {
   return (
@@ -22,6 +26,9 @@ function Home() {
             path="/single-hotel-detail/:hotelId"
             element={<SingleHotelDetail />}
           />
+          <Route path="/hotel-checkout" element={<HotelCheckout />} />
+          <Route path="/hotel-payment" element={<HotelPayment />} />
+
           <Route path="/flights" element={<Flights />} />
           <Route
             path="/single-flight-details"
@@ -29,6 +36,8 @@ function Home() {
           />
           <Route path="/register" element={<Register />} />
           <Route path="/signin" element={<Signin />} />
+          <Route path="/flight-checkout" element={<FlightCheckout />} />
+          <Route path="/flight-payment" element={<FlightPayment />} />
         </Routes>
       </AuthProvider>
     </div>

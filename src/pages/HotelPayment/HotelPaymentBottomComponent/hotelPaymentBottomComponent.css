@@ -1,0 +1,26 @@
+.HotelPaymentBottomContainer{
+    padding:15px;
+    margin-top: 10px;
+}
+.HotelPaymentCheckboxTextFlex{
+    margin-top: 10px;
+    display: flex;
+    gap:10px;
+    align-items: center;
+    font-size: 16px;
+    color: rgb(46, 46, 46);
+}
+.HotelPaymentCheckboxTextFlex input{
+    height: 20px;
+    width: 20px;
+}
+.hotelPaymentSmallText{
+    margin-top: 10px;
+    font-size: 13px;
+    color: rgb(46, 46, 46);
+}
+.hotelPaymentBottomText{
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgb(46, 46, 46);
+}

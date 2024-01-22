@@ -1,0 +1,219 @@
+.hotelCheckoutContainer{
+    width: 80%;
+    margin: auto;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.hotelCheckoutDetailFormFlex{
+    display: flex;
+    gap:25px;
+}
+.hotelCheckoutDetail{
+   flex:0.97;
+}
+.hotelCheckoutForm{
+    flex:2;
+ }
+ .hotelCheckoutFormContainer{
+    padding:15px;
+    border: 1px solid rgb(223, 219, 219);
+    border-radius: 10px;
+ }
+ .enterDetails{
+    font-size: 20px;
+    font-weight: 700;
+ }
+ .almostDone{
+    margin-top: 20px;
+    height: 60px;
+    padding-left: 15px;
+    border: 1px solid rgb(100, 99, 99);
+    background-color: rgb(247, 245, 245);
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+ }
+ .firstNameLastName{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap:20px;
+ }
+ .hotelCheckoutInputBox{
+    margin-top: 10px;
+    width: 48%;
+ }
+ .hotelCheckoutInputBox input{
+    width:94%;
+    padding:11px;
+    border: 1px solid rgb(139, 138, 138);
+    border-radius: 5px;
+ }
+ .hotelCheckoutTypeHeader{
+    font-size: 16px;
+    font-weight: 700;
+ }
+ .emailBottomText{
+    font-size: 16px;
+    color: rgb(77, 75, 75);
+ }
+ .hotelCheckoutBorderLine{
+    margin-top: 20px;
+    border: 1px solid rgb(223, 220, 220);
+
+ }
+ .hotelCheckoutAddressContainer{
+    margin-top: 20px;
+ }
+ .yourAddressText{
+    font-size: 18px;
+    font-weight: 700;
+ }
+ .AddressContainer{
+    display: flex;
+    flex-direction: column;
+ }
+ .hotelCheckoutInputCheckbox{
+    
+    margin-top: 10px;
+    display: flex;
+    
+ }
+ .hotelCheckoutInputCheckbox input{
+    height: 20px;
+    width: 20px;
+    border-radius: 2px;
+ }
+ .hotelCheckoutInputRadioBox{
+    margin-top: 10px;
+ }
+ .radioInput input{
+    height: 20px;
+    width: 20px;
+ }
+
+
+
+.hotelCheckBottomButtons{
+    display: flex;
+    justify-content: flex-end;
+    gap:20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.checkoutNextButton{
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding:15px 30px;
+    background-color: #006ce4;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
+.priceMatchButton{
+    outline: none;
+    border: none;
+    
+    padding:10px;
+    color: #006ce4;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+}
+
+
+.HotelCheckoutTopContainer{
+    padding: 25px 5px;
+   ;
+    box-sizing: content-box;
+}
+.whoIsFlyingFlex{
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+.whoIsFlying{
+    display: flex;
+    gap:10px;
+}
+.whoIsFlyingCircle{
+    height:26px;
+    width: 26px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color:white;
+    font-size: 18px;
+    
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    
+}
+.whoIsFlyingText{
+    font-size: 16px;
+    
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.whoIsFlyingLine{
+    flex:1;
+    border: 1px solid grey;
+    
+
+}
+.checkAndPay{
+    display: flex;
+    gap:10px
+}
+.checkAndPayCircle{
+    height:26px;
+    width: 26px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid grey;
+    color:grey;
+    font-size: 18px;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    
+}
+.checkAndPayText{
+    font-size: 16px;
+    color: grey;
+    font-weight: 700;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.priceMatchButton:hover{
+    background-color: rgb(213, 247, 247);
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .hotelCheckoutContainer{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .hotelCheckoutDetailFormFlex{
+        flex-direction: column;
+    }
+    .hotelCheckoutInputBox{
+        width: 100%;
+    }
+}
