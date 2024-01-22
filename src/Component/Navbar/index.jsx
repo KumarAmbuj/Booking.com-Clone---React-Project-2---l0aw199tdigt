@@ -29,7 +29,7 @@ function Navbar() {
               <img src="https://t-cf.bstatic.com/design-assets/assets/v3.109.0/images-flags/In@3x.png" />
             </div>
             <div className="questionMark">
-              <i class="fa fa-question-circle"></i>
+              <i className="fa fa-question-circle"></i>
             </div>
             <div className="listYourProperty">List your property</div>
 
@@ -53,7 +53,7 @@ function Navbar() {
             )}
 
             <div className="userIcon">
-              <i class="fa fa-user-circle"></i>
+              <i className="fa fa-user-circle"></i>
             </div>
 
             <div className="userIcon">
@@ -68,7 +68,6 @@ function Navbar() {
         <div className="staysFlightButtons">
           <Link to="/">
             <button>
-              {/* <i class="fa fa-bed" aria-hidden="true"></i>{" "} */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

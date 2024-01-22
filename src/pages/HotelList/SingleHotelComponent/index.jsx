@@ -36,7 +36,7 @@ function SingleHotelComponent(props) {
               {props.data.name}
             </Link>
             <span style={{ marginLeft: "8px" }}>
-              {arr.map((val) => {
+              {arr.map((val, index) => {
                 return (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -44,6 +44,7 @@ function SingleHotelComponent(props) {
                     height={"13px"}
                     width={"13px"}
                     style={{ marginRight: "2px" }}
+                    key={index}
                   >
                     <path
                       fill="#ffb700"
