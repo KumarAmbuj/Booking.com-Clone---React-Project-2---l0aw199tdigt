@@ -1,4 +1,4 @@
-import "./hotelCheckoutAddToYourStayComponent.css";
+import "./HotelCheckoutAddToYourStayComponent.css";
 import { memo } from "react";
 function HotelCheckoutAddToYourStayComponent() {
   return (
