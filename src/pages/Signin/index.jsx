@@ -100,7 +100,7 @@ function Signin() {
           />
           <div className="registerInputText">User password</div>
           <input
-            type="email"
+            type="password"
             placeholder="Enter your email address"
             name="password"
             onChange={handleChange}
