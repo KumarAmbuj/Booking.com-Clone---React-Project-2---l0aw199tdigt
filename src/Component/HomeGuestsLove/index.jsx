@@ -3,13 +3,14 @@ import "./homeGuestsLove.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import { HomeGuestLoveArray } from "../../Constant/constant";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 
 function HomeGuestsLove() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
