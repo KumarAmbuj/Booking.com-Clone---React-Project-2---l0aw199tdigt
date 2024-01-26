@@ -3,10 +3,27 @@ import { FlightCode } from "../../../Constant/constant";
 import { FlightCodeArray } from "../../../Constant/constant";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { monthNames } from "../../../Constant/constant";
+import { AuthContext } from "../../../authentication/AuthContext";
+import { useContext } from "react";
+
+import MyCalendar from "../../../Component/CalendarComponent";
+
 function CompareAndBook() {
+  const { date, setDate } = useContext(AuthContext);
   const navigate = useNavigate();
   const [flightFrom, setFlightFrom] = useState("");
   const [flightTo, setFlightTo] = useState("");
+  const [calendar, setCalendar] = useState(false);
+
+  function handleCalndear() {
+    setCalendar(!calendar);
+  }
+
+  // function selectDate(val) {
+  //   setDate(val);
+  // }
+
   function handleFlightFrom(e) {
     setFlightFrom(e.target.value);
   }
@@ -99,7 +116,7 @@ function CompareAndBook() {
           </select>
         </div>
 
-        <div className="inputSearchReturn">
+        <div className="inputSearchReturn" onClick={handleCalndear}>
           {/* <i class="fa fa-calendar" aria-hidden="true"></i> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +126,17 @@ function CompareAndBook() {
           >
             <path d="M22.5 13.5v8.25a.75.75 0 0 1-.75.75H2.25a.75.75 0 0 1-.75-.75V5.25a.75.75 0 0 1 .75-.75h19.5a.75.75 0 0 1 .75.75v8.25zm1.5 0V5.25A2.25 2.25 0 0 0 21.75 3H2.25A2.25 2.25 0 0 0 0 5.25v16.5A2.25 2.25 0 0 0 2.25 24h19.5A2.25 2.25 0 0 0 24 21.75V13.5zm-23.25-3h22.5a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5zM7.5 6V.75a.75.75 0 0 0-1.5 0V6a.75.75 0 0 0 1.5 0zM18 6V.75a.75.75 0 0 0-1.5 0V6A.75.75 0 0 0 18 6zM5.095 14.03a.75.75 0 1 0 1.06-1.06.75.75 0 0 0-1.06 1.06zm.53-1.28a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5zm-.53 6.53a.75.75 0 1 0 1.06-1.06.75.75 0 0 0-1.06 1.06zm.53-1.28a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5zm5.845-3.97a.75.75 0 1 0 1.06-1.06.75.75 0 0 0-1.06 1.06zm.53-1.28A1.125 1.125 0 1 0 12 15a1.125 1.125 0 0 0 0-2.25.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5zm-.53 6.53a.75.75 0 1 0 1.06-1.06.75.75 0 0 0-1.06 1.06zM12 18a1.125 1.125 0 1 0 0 2.25A1.125 1.125 0 0 0 12 18a.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5zm5.845-3.97a.75.75 0 1 0 1.06-1.06.75.75 0 0 0-1.06 1.06zm.53-1.28a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5zm-.53 6.53a.75.75 0 1 0 1.06-1.06.75.75 0 0 0-1.06 1.06zm.53-1.28a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5z"></path>
           </svg>
-          <input type="text" placeholder="Depart- Return" />
+          <input
+            type="text"
+            value={`${monthNames[date.getMonth()]} ${date.getDate()}`}
+          />
+          {calendar ? (
+            <div className="calendarContainer">
+              <MyCalendar />
+            </div>
+          ) : (
+            ""
+          )}
         </div>
 
         <div className="inputSearchButton">

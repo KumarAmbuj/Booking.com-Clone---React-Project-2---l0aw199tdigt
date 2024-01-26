@@ -1,4 +1,4 @@
-.flightBestContent{
+/* .flightBestContent{
     display: flex;
     margin-top: 20px;
     border: 1px solid rgb(224, 220, 220);
@@ -14,10 +14,9 @@
 .flightBestContentInnerChild{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 10px;
-    /* border: 1px solid rgb(206, 201, 201);
-    border-radius: 10px; */
+    
 }
 .flightBestContentInnerChildImage img{
     padding: 15px;
@@ -90,4 +89,4 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */

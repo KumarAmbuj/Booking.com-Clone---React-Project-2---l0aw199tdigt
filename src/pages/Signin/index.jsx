@@ -32,13 +32,14 @@ function Signin() {
         }
       );
       let resultResponse = await result.json();
-      console.log("hwyyy", resultResponse);
+      //console.log("hwyyy", resultResponse);
 
       if (resultResponse.status === "success") {
         login();
         SetToken(resultResponse.token);
         SetUserName(resultResponse.data.name);
         setMessage(resultResponse);
+        localStorage.setItem("booking", resultResponse.token);
 
         setTimeout(() => {
           navigate("/");

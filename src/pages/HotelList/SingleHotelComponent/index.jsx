@@ -112,7 +112,9 @@ function SingleHotelComponent(props) {
             </div>
           </div>
           <div className="hotelComponentRatingBottomButton">
-            <button>Show prices</button>
+            <Link to={`/single-hotel-detail/${props.data._id}`}>
+              <button>Show prices</button>
+            </Link>
           </div>
         </div>
       </div>

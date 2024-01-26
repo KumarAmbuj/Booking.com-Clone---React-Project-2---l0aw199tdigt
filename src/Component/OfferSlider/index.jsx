@@ -3,6 +3,7 @@ import "./offerSlider.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 function OfferSlider() {
   const settings = {
@@ -32,7 +33,11 @@ function OfferSlider() {
               monthly rates.
             </div>
             <div className="offerSliderCardButton">
-              <button>Find a stay</button>
+              <Link
+                to={`/hotel-list/${"Delhi, National Capital Territory of Delhi"}`}
+              >
+                <button>Find a stay</button>
+              </Link>
             </div>
           </div>
           <div className="offerSliderCardRight">
@@ -42,6 +47,7 @@ function OfferSlider() {
             />
           </div>
         </div>
+
         <div className="offerSliderCard">
           <div className="offerSliderCardLeft">
             <div className="offerSliderCardBoldText">
@@ -51,7 +57,14 @@ function OfferSlider() {
               Get inspired, compare and book flights with more flexibility
             </div>
             <div className="offerSliderCardButton">
-              <button>Search for flights</button>
+              <Link
+                to={`/single-flight-details?search=${JSON.stringify({
+                  source: "DEL",
+                  destination: "MAA",
+                })}`}
+              >
+                <button>Search for flights</button>
+              </Link>
             </div>
           </div>
           <div className="offerSliderCardRight">

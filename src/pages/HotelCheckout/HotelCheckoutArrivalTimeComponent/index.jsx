@@ -9,7 +9,7 @@ function HotelCheckoutArrivalTimeCoponent() {
         <div className="arrivalTimeFlex">
           <span>
             <svg
-              class="bk-icon -streamline-checkmark_selected"
+              className="bk-icon -streamline-checkmark_selected"
               fill="#008009"
               height="24"
               width="24"
@@ -28,7 +28,7 @@ function HotelCheckoutArrivalTimeCoponent() {
         <div className="arrivalTimeFlex">
           <span>
             <svg
-              class="bk-icon -streamline-front_desk"
+              className="bk-icon -streamline-front_desk"
               fill="#008009"
               height="24"
               width="24"

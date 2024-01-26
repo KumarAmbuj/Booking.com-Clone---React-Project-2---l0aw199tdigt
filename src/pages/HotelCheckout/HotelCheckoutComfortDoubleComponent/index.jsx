@@ -8,7 +8,7 @@ function HotelCheckoutComfortDoubleComponent() {
         <div className="comfortBoxFlex">
           <div>
             <svg
-              class="bk-icon -streamline-checkmark_fill"
+              className="bk-icon -streamline-checkmark_fill"
               fill="#008009"
               height="16"
               role="presentation"
@@ -23,7 +23,7 @@ function HotelCheckoutComfortDoubleComponent() {
           <div style={{ fontWeight: "700" }}>Non-refundable</div>
           <div>
             <svg
-              class="bk-icon -streamline-question_mark_circle"
+              className="bk-icon -streamline-question_mark_circle"
               fill="#0071C2"
               height="16"
               width="16"
@@ -40,7 +40,7 @@ function HotelCheckoutComfortDoubleComponent() {
         <div className="comfortBoxFlex">
           <div>
             <svg
-              class="bk-icon -streamline-checkmark_fill"
+              className="bk-icon -streamline-checkmark_fill"
               fill="#008009"
               height="16"
               role="presentation"
@@ -61,7 +61,7 @@ function HotelCheckoutComfortDoubleComponent() {
         <div className="comfortBoxFlex">
           <div>
             <svg
-              class="bk-icon -streamline-couple"
+              className="bk-icon -streamline-couple"
               fill="#262626"
               height="16"
               role="presentation"
@@ -78,7 +78,7 @@ function HotelCheckoutComfortDoubleComponent() {
           </div>
           <div>
             <svg
-              class="bk-icon -streamline-question_mark_circle"
+              className="bk-icon -streamline-question_mark_circle"
               fill="#0071C2"
               height="16"
               width="16"
@@ -95,7 +95,7 @@ function HotelCheckoutComfortDoubleComponent() {
         <div className="comfortBoxFlex">
           <div>
             <svg
-              class="bk-icon -streamline-sparkles"
+              className="bk-icon -streamline-sparkles"
               fill="#333333"
               height="16"
               role="presentation"
@@ -113,7 +113,7 @@ function HotelCheckoutComfortDoubleComponent() {
         <div className="comfortBoxFlex">
           <div>
             <svg
-              class="bk-icon -streamline-no_smoking"
+              className="bk-icon -streamline-no_smoking"
               fill="#333333"
               height="16"
               role="presentation"
@@ -131,7 +131,7 @@ function HotelCheckoutComfortDoubleComponent() {
         <div className="comfortDoubleButtons">
           <div className="comfortDoubleButtonsBox">
             <svg
-              class="bk-icon -streamline-room_size"
+              className="bk-icon -streamline-room_size"
               fill="#008009"
               height="16"
               width="16"
@@ -147,7 +147,7 @@ function HotelCheckoutComfortDoubleComponent() {
 
           <div className="comfortDoubleButtonsBox">
             <svg
-              class="bk-icon -streamline-mountains"
+              className="bk-icon -streamline-mountains"
               fill="#008009"
               height="16"
               width="16"
@@ -163,7 +163,7 @@ function HotelCheckoutComfortDoubleComponent() {
 
           <div className="comfortDoubleButtonsBox">
             <svg
-              class="bk-icon -streamline-weather_snowflake"
+              className="bk-icon -streamline-weather_snowflake"
               fill="#008009"
               height="16"
               width="16"
@@ -179,7 +179,7 @@ function HotelCheckoutComfortDoubleComponent() {
 
           <div className="comfortDoubleButtonsBox">
             <svg
-              class="bk-icon -streamline-shower"
+              className="bk-icon -streamline-shower"
               fill="#008009"
               height="16"
               width="16"
@@ -195,7 +195,7 @@ function HotelCheckoutComfortDoubleComponent() {
 
           <div className="comfortDoubleButtonsBox">
             <svg
-              class="bk-icon -streamline-soundproof"
+              className="bk-icon -streamline-soundproof"
               fill="#008009"
               height="16"
               width="16"

@@ -1,0 +1,13 @@
+.pageConstruction{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pageConstruction img{
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
+    
+}

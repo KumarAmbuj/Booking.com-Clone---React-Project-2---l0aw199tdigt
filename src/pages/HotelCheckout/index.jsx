@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import FlightRegisterSignInNavbar from "../../Component/FlightRegisterSignInNavbar";
 import "./hotelCheckout.css";
 import HotelCheckoutAddToYourStayComponent from "./HotelCheckoutAddToYourStayComponent";
@@ -20,11 +21,78 @@ function HotelCheckout() {
   const navigate = useNavigate();
   // console.log(hotelDetail);
   // console.log(index);
+  const firstName = useRef(null);
+  const lastName = useRef(null);
+  const email = useRef(null);
+  const address = useRef(null);
+  const city = useRef(null);
+  const zipCode = useRef(null);
+  const country = useRef(null);
+  const phoneNumber = useRef(null);
+
+  // const handleFocus = () => {
+  //   if (inputRef.current) {
+  //     firstName.current.style.border = "2px solid #00ff00";
+  //   }
+  // };
+
+  // const handleBlur = () => {
+  //   if (firstName.current) {
+  //     firstName.current.style.border = "2px solid #000000";
+  //   }
+  // };
+
   function handleClick() {
-    navigate("/hotel-payment", {
-      state: { hotelDetail: hotelDetail, index: index },
-    });
+    console.log(firstName.current.value, lastName.current.value);
+    if (
+      firstName.current.value &&
+      lastName.current.value &&
+      email.current.value &&
+      address.current.value &&
+      city.current.value &&
+      zipCode.current.value &&
+      phoneNumber.current.value
+    ) {
+      navigate("/hotel-payment", {
+        state: { hotelDetail: hotelDetail, index: index },
+      });
+    } else {
+      if (!firstName.current.value) {
+        firstName.current.focus();
+        firstName.current.style.outline = "1px solid red";
+      }
+      if (!lastName.current.value) {
+        lastName.current.focus();
+        lastName.current.style.outline = "1px solid red";
+      }
+      if (!email.current.value) {
+        email.current.focus();
+        email.current.style.outline = "1px solid red";
+      }
+      if (!address.current.value) {
+        address.current.focus();
+        address.current.style.outline = "1px solid red";
+      }
+      if (!city.current.value) {
+        city.current.focus();
+        city.current.style.outline = "1px solid red";
+      }
+      if (!country.current.value) {
+        country.current.focus();
+        country.current.style.outline = "1px solid red";
+      }
+      if (!phoneNumber.current.value) {
+        phoneNumber.current.focus();
+        phoneNumber.current.style.outline = "1px solid red";
+      }
+
+      if (!zipCode.current.value) {
+        zipCode.current.focus();
+        zipCode.current.style.outline = "1px solid red";
+      }
+    }
   }
+
   return (
     <>
       <FlightRegisterSignInNavbar />
@@ -78,7 +146,7 @@ function HotelCheckout() {
               <div className="enterDetails">Enter your details</div>
               <div className="almostDone">
                 <svg
-                  class="bk-icon -streamline-info_sign"
+                  className="bk-icon -streamline-info_sign"
                   height="22px"
                   role="presentation"
                   width="22px"
@@ -99,7 +167,12 @@ function HotelCheckout() {
                     <span style={{ color: "red", marginLeft: "-1px" }}>*</span>
                   </div>
                   <div style={{ marginTop: "3px" }}>
-                    <input type="text" />
+                    <input
+                      type="text"
+                      ref={firstName}
+                      // onFocus={handleFocus}
+                      // onBlur={handleBlur}
+                    />
                   </div>
                 </div>
                 <div className="hotelCheckoutInputBox">
@@ -108,7 +181,7 @@ function HotelCheckout() {
                     <span style={{ color: "red", marginLeft: "-1px" }}>*</span>
                   </div>
                   <div style={{ marginTop: "3px" }}>
-                    <input type="text" />
+                    <input type="text" ref={lastName} />
                   </div>
                 </div>
                 <div className="hotelCheckoutInputBox">
@@ -117,7 +190,7 @@ function HotelCheckout() {
                     <span style={{ color: "red", marginLeft: "-1px" }}>*</span>
                   </div>
                   <div style={{ marginTop: "3px" }}>
-                    <input type="text" />
+                    <input type="email" ref={email} />
                   </div>
                   <div className="emailBottomText">
                     Confirmation email goes to this address
@@ -139,7 +212,7 @@ function HotelCheckout() {
                       </span>
                     </div>
                     <div style={{ marginTop: "3px" }}>
-                      <input type="text" />
+                      <input type="text" ref={address} />
                     </div>
                   </div>
                   <div className="hotelCheckoutInputBox">
@@ -150,7 +223,7 @@ function HotelCheckout() {
                       </span>
                     </div>
                     <div style={{ marginTop: "3px" }}>
-                      <input type="text" />
+                      <input type="text" ref={city} />
                     </div>
                   </div>
                   <div className="hotelCheckoutInputBox">
@@ -161,7 +234,7 @@ function HotelCheckout() {
                       </span>
                     </div>
                     <div style={{ marginTop: "3px" }}>
-                      <input type="text" />
+                      <input type="number" ref={zipCode} />
                     </div>
                   </div>
                   <div className="hotelCheckoutInputBox">
@@ -172,7 +245,7 @@ function HotelCheckout() {
                       </span>
                     </div>
                     <div style={{ marginTop: "3px" }}>
-                      <input type="text" />
+                      <input type="text" ref={country} />
                     </div>
                   </div>
                   <div className="hotelCheckoutInputBox">
@@ -183,7 +256,7 @@ function HotelCheckout() {
                       </span>
                     </div>
                     <div style={{ marginTop: "3px" }}>
-                      <input type="text" />
+                      <input type="number" ref={phoneNumber} />
                     </div>
                     <div className="emailBottomText">
                       Needed by the property to validate your booking
@@ -262,7 +335,7 @@ function HotelCheckout() {
                 Next: Final Details
                 <span>
                   <svg
-                    class="bk-icon -streamline-arrow_nav_right"
+                    className="bk-icon -streamline-arrow_nav_right"
                     height="24"
                     role="presentation"
                     width="24"

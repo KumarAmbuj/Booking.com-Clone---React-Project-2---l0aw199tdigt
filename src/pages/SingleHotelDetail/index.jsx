@@ -50,7 +50,9 @@ function SingleHotelDetail() {
         <div className="singleHotelDetailTopHeader">
           {`Home > Hotels > All B&Bs > India > ${hotelDetail?.data?.location} > ${hotelDetail?.data?.name}`}
         </div>
+
         <SingleHotelFilterImageComponent data={hotelDetail?.data} />
+
         <SingleHotelDetailAvailabilityComponent data={hotelDetail?.data} />
         {/* {facilities} */}
         <HotelFacility data={hotelDetail?.data} />

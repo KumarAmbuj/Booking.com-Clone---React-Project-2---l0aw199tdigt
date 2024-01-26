@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./singleHotelImageComponent.css";
+import { Link } from "react-router-dom";
 function SingleHotelImageComponent(props) {
   const [buttonActive, setButtonActive] = useState(1);
   function handleClick(val) {
@@ -16,6 +17,7 @@ function SingleHotelImageComponent(props) {
         >
           Overview
         </button>
+
         <button
           onClick={() => {
             handleClick(2);
@@ -24,6 +26,7 @@ function SingleHotelImageComponent(props) {
         >
           Info & prices
         </button>
+
         <button
           onClick={() => {
             handleClick(3);

@@ -11,6 +11,9 @@ import { useLocation } from "react-router-dom";
 function SingleFlightDetails() {
   const location = useLocation();
   const [flightData, setFlightData] = useState([]);
+  const { state } = useLocation();
+
+  //console.log(state.date);
 
   async function getFlightList() {
     try {

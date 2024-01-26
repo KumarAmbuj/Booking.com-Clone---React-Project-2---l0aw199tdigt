@@ -22,7 +22,7 @@ function HotelCheckoutPriceComponent(props) {
       <div className="imageAndTaxFlex">
         <div>
           <svg
-            class="bk-icon -streamline-accounting_bills"
+            className="bk-icon -streamline-accounting_bills"
             height="20"
             width="20"
             viewBox="0 0 24 24"

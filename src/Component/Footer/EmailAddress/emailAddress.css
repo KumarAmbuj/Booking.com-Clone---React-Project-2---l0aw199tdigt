@@ -93,13 +93,16 @@
 
 .LowerLink{
     display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
 
 }
 .LowerLinkDiv{
     flex:1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
    
 }
 .LowerLinkDivType{

@@ -14,6 +14,7 @@ import FlightCheckout from "../FlightCheckout";
 import FlightPayment from "../FlightPayment";
 import HotelCheckout from "../HotelCheckout";
 import HotelPayment from "../HotelPayment";
+import PageUnderConstruction from "../PageUnderConstruction";
 
 function Home() {
   return (
@@ -38,6 +39,10 @@ function Home() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/flight-checkout" element={<FlightCheckout />} />
           <Route path="/flight-payment" element={<FlightPayment />} />
+          <Route
+            path="/page-under-construction"
+            element={<PageUnderConstruction />}
+          />
         </Routes>
       </AuthProvider>
     </div>

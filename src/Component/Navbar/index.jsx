@@ -31,7 +31,11 @@ function Navbar() {
             <div className="questionMark">
               <i className="fa fa-question-circle"></i>
             </div>
-            <div className="listYourProperty">List your property</div>
+            <div className="listYourProperty">
+              <Link to="page-under-construction" style={{ color: "white" }}>
+                List your property
+              </Link>
+            </div>
 
             {!isLoggedIn ? (
               <>

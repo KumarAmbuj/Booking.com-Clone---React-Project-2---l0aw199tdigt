@@ -1,12 +1,47 @@
 import "./hideNavigation.css";
+import { AuthContext } from "../../../authentication/AuthContext";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+
 function HideNavigation(props) {
+  const { logout, isLoggedIn } = useContext(AuthContext);
+  function handleLogout() {
+    logout();
+  }
   return (
     <div className="hideNavigationContainer">
       <div className="crossButton">
-        <i class="fa fa-times" aria-hidden="true" onClick={props.onclick}></i>
+        <i
+          className="fa fa-times"
+          aria-hidden="true"
+          onClick={props.onclick}
+        ></i>
       </div>
 
       <div className="more">More</div>
+
+      <div className="hideMenuItem">
+        {!isLoggedIn ? (
+          <>
+            <div className="hideMenuName">
+              <Link to="/register">
+                {" "}
+                <button>Register</button>
+              </Link>
+            </div>
+            <div className="hideMenuName">
+              <Link to="/signin">
+                {" "}
+                <button>Signin</button>
+              </Link>
+            </div>
+          </>
+        ) : (
+          <div className="hideMenuName">
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+        )}
+      </div>
 
       <div className="hideMenuItem">
         <div className="hideMenuName">INR</div>
@@ -23,7 +58,7 @@ function HideNavigation(props) {
       </div>
       <div className="hideMenuItem">
         <div className="hideMenuName">INR</div>
-        <div className="hideMenuName">Genius loyalty prograamme</div>
+        <div className="hideMenuName">Genius loyalty programme</div>
       </div>
       <div className="hideMenuItem">
         <div className="hideMenuName">INR</div>

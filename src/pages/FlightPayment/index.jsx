@@ -1,12 +1,50 @@
 import "./flightPayment.css";
 import FlightRegisterSignInNavbar from "../../Component/FlightRegisterSignInNavbar";
 import { useLocation } from "react-router-dom";
+import { AuthContext } from "../../authentication/AuthContext";
+import { useContext, useRef } from "react";
 
 import { FlightCode } from "../../Constant/constant";
+import { monthNames, dayNames } from "../../Constant/constant";
 
 function FlightPayment() {
+  const { date } = useContext(AuthContext);
   const { state } = useLocation();
-  const { singleFlightData } = state;
+  const { singleFlightData, firstName, lastName, email, phoneNumber, gender } =
+    state;
+  const cardHolderName = useRef(null);
+  const cardNumber = useRef(null);
+  const expiryDate = useRef(null);
+  const cvv = useRef(null);
+
+  function handleClick() {
+    if (
+      cardHolderName.current.value &&
+      cardNumber.current.value &&
+      expiryDate.current.value &&
+      cvv.current.value
+    ) {
+      alert("booking confirm");
+    } else {
+      if (!cardHolderName.current.value) {
+        cardHolderName.current.focus();
+        cardHolderName.current.style.outline = "1px solid red";
+      }
+      if (!cardNumber.current.value) {
+        cardNumber.current.focus();
+        cardNumber.current.style.outline = "1px solid red";
+      }
+      if (!expiryDate.current.value) {
+        expiryDate.current.focus();
+        expiryDate.current.style.outline = "1px solid red";
+      }
+      if (!cvv.current.value) {
+        cvv.current.focus();
+        cvv.current.style.outline = "1px solid red";
+      }
+    }
+  }
+
   return (
     <div>
       <FlightRegisterSignInNavbar />
@@ -39,7 +77,11 @@ function FlightPayment() {
         </div>
 
         <div className="roundTripText">
-          Round trip · 1 traveller · Sat 20 Jan - Sat 27 Jan
+          Round trip · 1 traveller ·{" "}
+          {`${dayNames[date.getDay()]} ${date.getDate()} ${
+            monthNames[date.getMonth()]
+          }`}{" "}
+          - Sat 27 Jan
         </div>
 
         <div className="FlightFromToCity">
@@ -66,8 +108,14 @@ function FlightPayment() {
                   {singleFlightData.destination})
                 </div>
                 <div className="paymentFlightLightText">
-                  Thu 25 Jan · {singleFlightData.departureTime} - Thu 25 Jan ·{" "}
-                  {singleFlightData.arrivalTime}
+                  {`${dayNames[date.getDay()]} ${date.getDate()} ${
+                    monthNames[date.getMonth()]
+                  }`}{" "}
+                  · {singleFlightData.departureTime} -{" "}
+                  {`${dayNames[date.getDay()]} ${date.getDate()} ${
+                    monthNames[date.getMonth()]
+                  }`}{" "}
+                  · {singleFlightData.arrivalTime}
                 </div>
                 <div className="paymentFlightLightText">
                   Direct · {singleFlightData.duration}h 10m · Economy
@@ -89,8 +137,14 @@ function FlightPayment() {
                   {singleFlightData.source})
                 </div>
                 <div className="paymentFlightLightText">
-                  Thu 25 Jan · {singleFlightData.departureTime} - Thu 25 Jan ·{" "}
-                  {singleFlightData.arrivalTime}
+                  {`${dayNames[date.getDay()]} ${date.getDate()} ${
+                    monthNames[date.getMonth()]
+                  }`}{" "}
+                  · {singleFlightData.departureTime} -{" "}
+                  {`${dayNames[date.getDay()]} ${date.getDate()} ${
+                    monthNames[date.getMonth()]
+                  }`}{" "}
+                  · {singleFlightData.arrivalTime}
                 </div>
                 <div className="paymentFlightLightText">
                   Direct · {singleFlightData.duration}h 10m · Economy
@@ -104,9 +158,9 @@ function FlightPayment() {
                 className="paymentContactLightText"
                 style={{ marginTop: "20px" }}
               >
-                +91 9999999999
+                +91 {phoneNumber}
               </div>
-              <div className="paymentContactLightText">a@gmail.com</div>
+              <div className="paymentContactLightText">{email}</div>
             </div>
 
             <div className="paymentContactDetail">
@@ -115,9 +169,9 @@ function FlightPayment() {
                 className="paymentContactLightText"
                 style={{ marginTop: "20px" }}
               >
-                Kumar Ambuj
+                {`${firstName} ${lastName}`}
               </div>
-              <div className="paymentContactLightText">Adult · Male</div>
+              <div className="paymentContactLightText">Adult · {gender}</div>
             </div>
 
             <div className="paymentBaggageDetail">
@@ -267,7 +321,7 @@ function FlightPayment() {
                     <input
                       type="text"
                       placeholder="Enter cardholder's name"
-                      required
+                      ref={cardHolderName}
                     />
                   </div>
 
@@ -287,7 +341,7 @@ function FlightPayment() {
                     <input
                       type="number"
                       placeholder="Enter card number"
-                      required
+                      ref={cardNumber}
                     />
                   </div>
 
@@ -297,12 +351,16 @@ function FlightPayment() {
                         Expiry Date <span style={{ color: "red" }}>*</span>
                       </div>
                       <div className="expiryDateInputBox">
-                        <input type="text" placeholder="MM / YY" required />
+                        <input
+                          type="text"
+                          placeholder="MM / YY"
+                          ref={expiryDate}
+                        />
                       </div>
                     </div>
                     <div className="paymentCvc">
                       <div className="emailInputText">
-                        CVC <span style={{ color: "red" }}>*</span>
+                        CVV <span style={{ color: "red" }}>*</span>
                       </div>
                       <div className="expiryDateInputBox">
                         <svg
@@ -313,7 +371,7 @@ function FlightPayment() {
                         >
                           <path d="M22.5 12v6.75a.75.75 0 0 1-.75.75H2.25a.75.75 0 0 1-.75-.75V5.25a.75.75 0 0 1 .75-.75h19.5a.75.75 0 0 1 .75.75V12zm1.5 0V5.25A2.25 2.25 0 0 0 21.75 3H2.25A2.25 2.25 0 0 0 0 5.25v13.5A2.25 2.25 0 0 0 2.25 21h19.5A2.25 2.25 0 0 0 24 18.75V12zM.75 9h22.5a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5zm4.5 4.5h8.25a.75.75 0 0 0 0-1.5H5.25a.75.75 0 0 0 0 1.5zm0 3h5.25a.75.75 0 0 0 0-1.5H5.25a.75.75 0 0 0 0 1.5z"></path>
                         </svg>
-                        <input type="text" required />
+                        <input type="text" ref={cvv} />
                       </div>
                     </div>
                   </div>
@@ -407,7 +465,7 @@ function FlightPayment() {
             <i className="fa fa-angle-left" style={{ marginRight: "10px" }}></i>
             Back
           </button>
-          <button className="flightPaymentNextButton">
+          <button className="flightPaymentNextButton" onClick={handleClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

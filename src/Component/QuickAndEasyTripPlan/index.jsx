@@ -70,7 +70,7 @@ function QuickAndEasyTripPlan() {
         >
           <span
             data-testid="webcore-filter-carousel-tab-icon"
-            class="fcd9eec8fb bf9a32efa5"
+            className="fcd9eec8fb bf9a32efa5"
             aria-hidden="true"
           >
             <svg

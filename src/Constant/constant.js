@@ -1591,3 +1591,20 @@ export const FlightCodeArray = [
   { city: "Guwahati", code: "GAU" },
   { city: "Bangalore", code: "BLR" },
 ];
+
+export const monthNames = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Novr",
+  "Dec",
+];
+
+export const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];

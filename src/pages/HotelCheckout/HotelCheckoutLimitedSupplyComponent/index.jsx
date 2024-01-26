@@ -6,7 +6,7 @@ function HotelCheckoutLimitedSupplyComponent() {
     <div className="hotelCheckoutLimitedContainer">
       <div>
         <svg
-          class="bk-icon -streamline-alarm"
+          className="bk-icon -streamline-alarm"
           height="24"
           width="24"
           viewBox="0 0 24 24"

@@ -2,6 +2,7 @@
     margin-top: 18px;
     display: flex;
     margin-bottom: 25px;
+    flex-wrap: wrap;
 }
 .regionChild{
     flex:1;

@@ -8,7 +8,7 @@ function HotelCheckoutGoodToKnowComponent() {
         <div className="goodToKnowLightText">
           <span>
             <svg
-              class="bk-icon -streamline-credit_card_crossed"
+              className="bk-icon -streamline-credit_card_crossed"
               fill="#008009"
               height="20px"
               role="presentation"

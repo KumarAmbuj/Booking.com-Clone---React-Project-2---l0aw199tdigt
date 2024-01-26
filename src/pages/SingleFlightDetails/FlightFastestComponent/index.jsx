@@ -1,5 +1,9 @@
 import FlightSingleComponent from "../FlightSingleComponent";
 import "./flightFastestComponent.css";
+
+import { AuthContext } from "../../../authentication/AuthContext";
+import { useContext } from "react";
+
 function FlightFastestComponent(props) {
   return (
     <div className="flightBestContainer">

@@ -5,9 +5,10 @@ import { useState } from "react";
 import { AuthContext } from "../../../authentication/AuthContext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { monthNames } from "../../../Constant/constant";
 
 function FlightSingleComponent(props) {
-  const { isLoggedIn } = useContext(AuthContext);
+  const { isLoggedIn, date } = useContext(AuthContext);
   const navigate = useNavigate();
   //console.log(props.data?.arrivalTime);
   const [modalShow, setModalShow] = useState(false);
@@ -30,14 +31,23 @@ function FlightSingleComponent(props) {
         <div className="flightBestContentChild1">
           <div className="flightBestContentInnerChild">
             <div className="flightBestContentInnerChildImage">
-              <img src="https://r-xx.bstatic.com/data/airlines_logo/6E.png" />
-              <div style={{ paddingLeft: "10px", marginBottom: "10px" }}>
-                Indigo
+              <img src="https://r-xx.bstatic.com/data/airlines_logo/AI.png" />
+              <div
+                style={{
+                  paddingLeft: "10px",
+                  marginBottom: "10px",
+                  marginTop: "-5px",
+                }}
+              >
+                Air India
               </div>
             </div>
             <div className="flightBestContentInnerChildTime">
               <div className="timeBoldText">{props?.data?.departureTime}</div>
-              <div className="timeLightText">{props?.data?.source} 11 Jan</div>
+              <div className="timeLightText">
+                {props?.data?.source}{" "}
+                {`${date.getDate()} ${monthNames[date.getMonth()]}`}
+              </div>
             </div>
             <div className="flightBestContentInnerChildLine">
               <div>{props?.data?.duration}h 10m</div>
@@ -49,22 +59,24 @@ function FlightSingleComponent(props) {
             <div className="flightBestContentInnerChildTime">
               <div className="timeBoldText">{props?.data?.arrivalTime}</div>
               <div className="timeLightText">
-                {props?.data?.destination} 11 Jan
+                {props?.data?.destination}{" "}
+                {`${date.getDate()} ${monthNames[date.getMonth()]}`}
               </div>
             </div>
           </div>
 
           <div className="flightBestContentInnerChild">
             <div className="flightBestContentInnerChildImage">
-              <img src="https://r-xx.bstatic.com/data/airlines_logo/6E.png" />
+              <img src="https://r-xx.bstatic.com/data/airlines_logo/AI.png" />
               <div style={{ paddingLeft: "10px", marginBottom: "10px" }}>
-                Indigo
+                Air India
               </div>
             </div>
             <div className="flightBestContentInnerChildTime">
               <div className="timeBoldText">09:35</div>
               <div className="timeLightText">
-                {props?.data?.destination} 11 Jan
+                {props?.data?.destination}{" "}
+                {`${date.getDate()} ${monthNames[date.getMonth()]}`}
               </div>
             </div>
             <div className="flightBestContentInnerChildLine">
@@ -76,7 +88,10 @@ function FlightSingleComponent(props) {
             </div>
             <div className="flightBestContentInnerChildTime">
               <div className="timeBoldText">09:35</div>
-              <div className="timeLightText">{props?.data?.source} 11 Jan</div>
+              <div className="timeLightText">
+                {props?.data?.source}{" "}
+                {`${date.getDate()} ${monthNames[date.getMonth()]}`}
+              </div>
             </div>
           </div>
         </div>

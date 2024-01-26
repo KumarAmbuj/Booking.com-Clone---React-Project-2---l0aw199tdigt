@@ -2,8 +2,13 @@ import "./singleFlightModalComponent.css";
 import { useEffect, useState } from "react";
 import { FlightCode } from "../../../Constant/constant";
 import { useNavigate } from "react-router-dom";
+import { monthNames } from "../../../Constant/constant";
+import { dayNames } from "../../../Constant/constant";
+import { AuthContext } from "../../../authentication/AuthContext";
+import { useContext } from "react";
 
 function SingleFlightModalComponent(props) {
+  const { date } = useContext(AuthContext);
   const { id } = props;
   const [singleFlightData, setSingleFlightData] = useState({});
   const navigate = useNavigate();
@@ -45,7 +50,9 @@ function SingleFlightModalComponent(props) {
   }, []);
 
   function handleToNavigate() {
-    navigate("/flight-checkout", { state: { singleFlightData } });
+    navigate("/flight-checkout", {
+      state: { singleFlightData },
+    });
     //console.log("heyyy");
   }
 
@@ -77,7 +84,10 @@ function SingleFlightModalComponent(props) {
                   className="flightFromToDetailLightText"
                   style={{ marginTop: "-3px" }}
                 >
-                  sat 20 Jan . {singleFlightData?.departureTime}
+                  {`${dayNames[date.getDay()]} ${date.getDate()} ${
+                    monthNames[date.getMonth()]
+                  }`}{" "}
+                  . {singleFlightData?.departureTime}
                 </div>
                 <div className="flightFromToDetailBoldText">
                   {singleFlightData?.source} .{" "}
@@ -92,7 +102,10 @@ function SingleFlightModalComponent(props) {
                   className="flightFromToDetailLightText"
                   style={{ marginTop: "-3px" }}
                 >
-                  sat 20 Jan . {singleFlightData?.arrivalTime}
+                  {`${dayNames[date.getDay()]} ${date.getDate()} ${
+                    monthNames[date.getMonth()]
+                  }`}{" "}
+                  . {singleFlightData?.arrivalTime}
                 </div>
                 <div className="flightFromToDetailBoldText">
                   {singleFlightData?.destination} .{" "}
@@ -128,7 +141,10 @@ function SingleFlightModalComponent(props) {
                   className="flightFromToDetailLightText"
                   style={{ marginTop: "-3px" }}
                 >
-                  sat 20 Jan . {singleFlightData?.departureTime}
+                  {`${dayNames[date.getDay()]} ${date.getDate()} ${
+                    monthNames[date.getMonth()]
+                  }`}{" "}
+                  . {singleFlightData?.departureTime}
                 </div>
                 <div className="flightFromToDetailBoldText">
                   {singleFlightData?.destination} .{" "}
@@ -143,7 +159,10 @@ function SingleFlightModalComponent(props) {
                   className="flightFromToDetailLightText"
                   style={{ marginTop: "-3px" }}
                 >
-                  sat 20 Jan . {singleFlightData?.arrivalTime}
+                  {`${dayNames[date.getDay()]} ${date.getDate()} ${
+                    monthNames[date.getMonth()]
+                  }`}{" "}
+                  . {singleFlightData?.arrivalTime}
                 </div>
                 <div className="flightFromToDetailBoldText">
                   {singleFlightData?.source} .{" "}

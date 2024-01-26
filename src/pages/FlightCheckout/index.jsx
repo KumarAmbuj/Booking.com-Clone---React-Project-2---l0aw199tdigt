@@ -3,14 +3,63 @@ import FlightRegisterSignInNavbar from "../../Component/FlightRegisterSignInNavb
 import { Link, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { FlightCode } from "../../Constant/constant";
+import { monthNames, dayNames } from "../../Constant/constant";
+import { AuthContext } from "../../authentication/AuthContext";
+import { useContext, useRef } from "react";
 
 function FlightCheckout() {
+  const { date } = useContext(AuthContext);
   const { state } = useLocation();
   const { singleFlightData } = state;
   const navigate = useNavigate();
+  const fName = useRef(null);
+  const lName = useRef(null);
+  const emailAd = useRef(null);
+  const pNumber = useRef(null);
+  const gender = useRef(null);
+
   //console.log(state);
   function handleToNavigate() {
-    navigate("/flight-payment", { state: { singleFlightData } });
+    if (
+      fName.current.value &&
+      lName.current.value &&
+      emailAd.current.value &&
+      pNumber.current.value &&
+      gender
+    ) {
+      navigate("/flight-payment", {
+        state: {
+          singleFlightData,
+          firstName: fName.current.value,
+          lastName: lName.current.value,
+          email: emailAd.current.value,
+          phoneNumber: pNumber.current.value,
+          gender: gender.current.value,
+        },
+      });
+    } else {
+      if (!fName.current.value) {
+        fName.current.focus();
+        fName.current.style.outline = "1px solid red";
+      }
+      if (!lName.current.value) {
+        lName.current.focus();
+        lName.current.style.outline = "1px solid red";
+      }
+      if (!emailAd.current.value) {
+        emailAd.current.focus();
+        emailAd.current.style.outline = "1px solid red";
+      }
+      if (!pNumber.current.value) {
+        pNumber.current.focus();
+        pNumber.current.style.outline = "1px solid red";
+      }
+      if (!gender.current.value) {
+        gender.current.focus();
+        gender.current.style.outline = "1px solid red";
+      }
+    }
+
     //console.log("heyyy");
   }
   return (
@@ -32,7 +81,11 @@ function FlightCheckout() {
         </div>
 
         <div className="roundTripText">
-          Round trip · 1 traveller · Sat 20 Jan - Sat 20 Jan
+          Round trip · 1 traveller ·{" "}
+          {`${dayNames[date.getDay()]} ${date.getDate()} ${
+            monthNames[date.getMonth()]
+          }`}{" "}
+          - Sat 20 Jan
         </div>
 
         <div className="FlightFromToCity">
@@ -60,7 +113,7 @@ function FlightCheckout() {
                   <input
                     type="email"
                     placeholder="Enter email address"
-                    required
+                    ref={emailAd}
                   />
                 </div>
               </div>
@@ -75,7 +128,7 @@ function FlightCheckout() {
                   <input
                     type="number"
                     placeholder="Enter phone number"
-                    required
+                    ref={pNumber}
                   />
                 </div>
               </div>
@@ -139,8 +192,8 @@ function FlightCheckout() {
                 <div className="emailInputBox">
                   <input
                     type="text"
-                    placeholder="Enter email address"
-                    required
+                    placeholder="Enter first name"
+                    ref={fName}
                   />
                 </div>
               </div>
@@ -153,9 +206,9 @@ function FlightCheckout() {
 
                 <div className="emailInputBox">
                   <input
-                    type="number"
-                    placeholder="Enter phone number"
-                    required
+                    type="text"
+                    placeholder="Enter last name"
+                    ref={lName}
                   />
                 </div>
               </div>
@@ -167,7 +220,7 @@ function FlightCheckout() {
                 </div>
 
                 <div className="emailInputBox">
-                  <select required>
+                  <select ref={gender}>
                     <option>Select your gender</option>
                     <option>Male</option>
                     <option>Female</option>

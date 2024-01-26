@@ -31,7 +31,7 @@ function HotelList() {
     try {
       //setIsLoader(true);
       const response = await fetch(
-        `https://academics.newtonschool.co/api/v1/bookingportals/hotel?location=${location}&limit=50`,
+        `https://academics.newtonschool.co/api/v1/bookingportals/hotel?location=${location}&limit=20`,
         {
           headers: {
             projectId: projectId,

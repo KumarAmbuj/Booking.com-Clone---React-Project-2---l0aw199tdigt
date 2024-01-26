@@ -25,6 +25,7 @@
     gap:10px;
     justify-content: space-between;
     margin-top: 20px;
+    
 }
 
 .offerSliderCard{
@@ -98,5 +99,23 @@
 @media only screen and (max-width: 700px) {
     .offerSliderContainer{
         width: 100%;
+    }
+    .offerSliderCardsContainer{
+        display: flex;
+        gap:10px;
+        justify-content: space-between;
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+    .offerSliderCard{
+        /* height: 12rem; */
+        width: 80%;
+        /* outline: 1px solid red; */
+        display: flex;
+        border: 1px solid rgb(196, 193, 193);
+        border-radius: 10px;
     }
 }

@@ -1,6 +1,12 @@
 import { memo } from "react";
 import "./hotelCheckoutBookingDetailsComponent.css";
+
+import { AuthContext } from "../../../authentication/AuthContext";
+import { useContext } from "react";
+import { monthNames, dayNames } from "../../../Constant/constant";
+
 function HotelCheckoutBookingDetailsComponent(props) {
+  const { date } = useContext(AuthContext);
   const { data, index } = props;
   return (
     <>
@@ -9,12 +15,20 @@ function HotelCheckoutBookingDetailsComponent(props) {
         <div className="checkinCheckoutFlex">
           <div className="chekcinBox">
             <div className="checkinText">Check-in</div>
-            <div className="checkinDateText">Sun 4 Feb 2024</div>
+            <div className="checkinDateText">{`${
+              dayNames[date.getDay()]
+            } ${date.getDate()} ${
+              monthNames[date.getMonth()]
+            } ${date.getFullYear()}`}</div>
             <div className="checkinTimeText">12:00 – 12:30</div>
           </div>
           <div className="checkoutBox">
             <div className="checkinText">Check-out</div>
-            <div className="checkinDateText">Sun 4 Feb 2024</div>
+            <div className="checkinDateText">{`${
+              dayNames[date.getDay()]
+            } ${date.getDate()} ${
+              monthNames[date.getMonth()]
+            } ${date.getFullYear()}`}</div>
             <div className="checkinTimeText">12:00 – 12:30</div>
           </div>
         </div>
