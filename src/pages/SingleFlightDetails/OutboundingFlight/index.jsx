@@ -1,4 +1,4 @@
-import "./outboundingFlight.css";
+import "./OutboundingFlight.css";
 import {
   DepartsFromArray,
   ArrivesAtDubaiArray,
