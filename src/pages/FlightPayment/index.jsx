@@ -1,6 +1,6 @@
 import "./flightPayment.css";
 import FlightRegisterSignInNavbar from "../../Component/FlightRegisterSignInNavbar";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../authentication/AuthContext";
 import { useContext, useRef } from "react";
 
@@ -8,6 +8,7 @@ import { FlightCode } from "../../Constant/constant";
 import { monthNames, dayNames } from "../../Constant/constant";
 
 function FlightPayment() {
+  const navigate = useNavigate();
   const { date } = useContext(AuthContext);
   const { state } = useLocation();
   const { singleFlightData, firstName, lastName, email, phoneNumber, gender } =
@@ -24,7 +25,7 @@ function FlightPayment() {
       expiryDate.current.value &&
       cvv.current.value
     ) {
-      alert("booking confirm");
+      navigate("/booking-confirm");
     } else {
       if (!cardHolderName.current.value) {
         cardHolderName.current.focus();
