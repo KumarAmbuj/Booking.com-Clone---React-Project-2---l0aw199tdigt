@@ -41,6 +41,7 @@ function Register() {
       } else {
         setMessage(resultResponse);
         navigate("/register");
+        
       }
     } catch {
       //toast.error("Some error occured");
@@ -64,22 +65,6 @@ function Register() {
 
   return (
     <div>
-      {/* <div className="registerNavbar">
-        <div className="registerLogoIcon">
-          <div className="registerLogo">
-            {" "}
-            <Link to="/">Booking.com</Link>
-          </div>
-          <div className="registerIcon">
-            <div className="indianFlag">
-              <img src="https://t-cf.bstatic.com/design-assets/assets/v3.109.0/images-flags/In@3x.png" />
-            </div>
-            <div className="questionMark">
-              <i className="fa fa-question-circle"></i>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <FlightRegisterSignInNavbar />
 
       <div className="registerContainer">

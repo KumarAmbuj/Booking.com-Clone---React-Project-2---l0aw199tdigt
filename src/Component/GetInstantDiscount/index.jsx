@@ -1,4 +1,5 @@
 import "./getInstantDiscount.css";
+import { Link } from "react-router-dom";
 
 function GetInstantDiscount() {
   return (
@@ -16,8 +17,12 @@ function GetInstantDiscount() {
         </div>
 
         <div className="getInstantDiscountButtons">
-          <button id="Active">Sign in</button>
-          <button>Register</button>
+          <Link to="/signin">
+            <button id="Active">Sign in</button>
+          </Link>
+          <Link to="register">
+            <button>Register</button>
+          </Link>
         </div>
       </div>
     </div>

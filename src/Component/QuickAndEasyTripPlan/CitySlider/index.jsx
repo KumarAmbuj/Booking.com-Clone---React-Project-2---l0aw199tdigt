@@ -9,7 +9,7 @@ import { useRef } from "react";
 
 function CitySlider() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 6,

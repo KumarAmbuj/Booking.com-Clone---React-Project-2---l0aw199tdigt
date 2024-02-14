@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 function PropertySlider() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
