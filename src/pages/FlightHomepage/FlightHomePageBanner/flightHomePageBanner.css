@@ -2,9 +2,9 @@
     width: 100%;
     padding: 40px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 50px;
-    gap:20px;
+    gap:0px;
     flex-wrap: wrap;
     background-color: rgb(241, 239, 239);
 }

@@ -1,4 +1,6 @@
 import "./signin.css";
+
+import { emailValidator, passwordValidator } from "../../Constant/constant";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { AuthContext } from "../../authentication/AuthContext";
@@ -14,6 +16,8 @@ function Signin() {
     appType: "bookingportals",
   });
   const [message, setMessage] = useState({});
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
 
   async function sendSigninData() {
     try {
@@ -65,7 +69,19 @@ function Signin() {
   function handleSubmit() {
     //console.log(signinData);
     //
-    sendSigninData();
+    if (
+      emailValidator(signinData.email) &&
+      passwordValidator(signinData.password)
+    ) {
+      sendSigninData();
+    } else {
+      if (!emailValidator(signinData.email)) {
+        setEmailError("Please input email in format");
+      }
+      if (!passwordValidator(signinData.email)) {
+        setPasswordError("Please input email in format");
+      }
+    }
   }
 
   return (
@@ -98,6 +114,7 @@ function Signin() {
             name="email"
             onChange={handleChange}
           />
+          <div style={{ color: "red" }}>{emailError}</div>
           <div className="registerInputText">User password</div>
           <input
             type="password"
@@ -105,6 +122,7 @@ function Signin() {
             name="password"
             onChange={handleChange}
           />
+          <div style={{ color: "red" }}>{passwordError}</div>
         </div>
         <div className="registerButton">
           <button onClick={handleSubmit}>Sign in</button>

@@ -1,5 +1,12 @@
 import "./register.css";
 import { Link, useNavigate } from "react-router-dom";
+import {
+  emailValidator,
+  passwordValidator,
+  mobileNumberValidator,
+  nameValidator,
+} from "../../Constant/constant";
+
 import { useState } from "react";
 import FlightRegisterSignInNavbar from "../../Component/FlightRegisterSignInNavbar";
 
@@ -12,6 +19,9 @@ function Register() {
     appType: "bookingportals",
   });
   const [message, setMessage] = useState({});
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
 
   async function sendRegisterData() {
     try {
@@ -41,7 +51,6 @@ function Register() {
       } else {
         setMessage(resultResponse);
         navigate("/register");
-        
       }
     } catch {
       //toast.error("Some error occured");
@@ -54,13 +63,32 @@ function Register() {
 
   function handleChange(e) {
     setMessage({});
+    setEmailError("");
+    setNameError("");
+    setPasswordError("");
     setRegisterData({ ...registerData, [e.target.name]: e.target.value });
   }
 
   function handleSubmit() {
     //console.log(registerData);
     //
-    sendRegisterData();
+    if (
+      emailValidator(registerData.email) &&
+      passwordValidator(registerData.password) &&
+      nameValidator(registerData.name)
+    ) {
+      sendRegisterData();
+    } else {
+      if (!passwordValidator(registerData.password)) {
+        setPasswordError("password must be of length greater than equal to 5");
+      }
+      if (!emailValidator(registerData.email)) {
+        setEmailError("Please input email in format");
+      }
+      if (!nameValidator(registerData.name)) {
+        setNameError("Character must be greater than equal to 3");
+      }
+    }
   }
 
   return (
@@ -77,6 +105,7 @@ function Register() {
             name="name"
             onChange={handleChange}
           />
+          <div style={{ color: "red" }}>{nameError}</div>
           <div className="registerInputText">Email address</div>
           <input
             type="email"
@@ -84,6 +113,7 @@ function Register() {
             name="email"
             onChange={handleChange}
           />
+          <div style={{ color: "red" }}>{emailError}</div>
           <div className="registerInputText">User password</div>
           <input
             type="password"
@@ -91,6 +121,7 @@ function Register() {
             name="password"
             onChange={handleChange}
           />
+          <div style={{ color: "red" }}>{passwordError}</div>
         </div>
         <div className="registerButton">
           <button onClick={handleSubmit}>Register</button>

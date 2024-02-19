@@ -150,6 +150,18 @@
     cursor: pointer;
 
 }
+.navbarToggle{
+    height: 50px;
+    width:50px;
+    font-size: 25px;
+    color:white;
+  
+    justify-content: center;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+
+}
 .userIcon:hover{
     background-color: #034ebe;
 }
@@ -224,7 +236,14 @@
     .navbarSigninButton{
         display: none;
     }
-    .userIcon{
+    .navbarToggle{
         display: flex;
     }
+}
+
+@media only screen and (max-width: 800px){
+    .navbarLogoAndIcon{
+        width: 90%;
+    }
+   
 }

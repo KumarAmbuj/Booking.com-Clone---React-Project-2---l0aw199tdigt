@@ -1,8 +1,8 @@
 .hideNavigationContainer{
-    width:100%;
+    width:95%;
     
     z-index: 6;
-    outline:1px solid red;
+    /* outline:1px solid red; */
     position: fixed;
     top:0;
     background-color: white;

@@ -1608,3 +1608,34 @@ export const monthNames = [
 ];
 
 export const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+export function emailValidator(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+export function mobileNumberValidator(number) {
+  const mobileNumberRegex = /^[6-9]\d{9}$/;
+
+  return mobileNumberRegex.test(number);
+}
+
+export function passwordValidator(password) {
+  return password.length >= 5;
+}
+
+export function nameValidator(name) {
+  return name.length >= 3;
+}
+
+export function cardNumberValidator(cardNumber) {
+  const cardNumberRegex = /^[0-9]{16}$/;
+
+  return cardNumberRegex.test(cardNumber);
+}
+
+export function cvvValidator(cvv) {
+  const cardNumberRegex = /^[0-9]{3}$/;
+
+  return cardNumberRegex.test(cvv);
+}

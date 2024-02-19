@@ -35,7 +35,7 @@ function SingleHotelImageComponent(props) {
         >
           Facilities
         </button>
-        <button
+        {/* <button
           onClick={() => {
             handleClick(4);
           }}
@@ -50,7 +50,7 @@ function SingleHotelImageComponent(props) {
           id={buttonActive === 5 ? "activeType" : ""}
         >
           House rules
-        </button>
+        </button> */}
       </div>
 
       <div className="singleHotelHeaderTextAndButton">

@@ -1,5 +1,11 @@
 import "./flightCheckout.css";
 import FlightRegisterSignInNavbar from "../../Component/FlightRegisterSignInNavbar";
+import {
+  nameValidator,
+  emailValidator,
+  mobileNumberValidator,
+} from "../../Constant/constant";
+
 import { Link, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { FlightCode } from "../../Constant/constant";
@@ -38,19 +44,19 @@ function FlightCheckout() {
         },
       });
     } else {
-      if (!fName.current.value) {
+      if (!nameValidator(fName.current.value)) {
         fName.current.focus();
         fName.current.style.outline = "1px solid red";
       }
-      if (!lName.current.value) {
+      if (!nameValidator(lName.current.value)) {
         lName.current.focus();
         lName.current.style.outline = "1px solid red";
       }
-      if (!emailAd.current.value) {
+      if (!emailValidator(emailAd.current.value)) {
         emailAd.current.focus();
         emailAd.current.style.outline = "1px solid red";
       }
-      if (!pNumber.current.value) {
+      if (!mobileNumberValidator(pNumber.current.value)) {
         pNumber.current.focus();
         pNumber.current.style.outline = "1px solid red";
       }

@@ -28,9 +28,9 @@ function Navbar() {
             <div className="indianFlag">
               <img src="https://t-cf.bstatic.com/design-assets/assets/v3.109.0/images-flags/In@3x.png" />
             </div>
-            <div className="questionMark">
+            {/* <div className="questionMark">
               <i className="fa fa-question-circle"></i>
-            </div>
+            </div> */}
             <div className="listYourProperty">
               <Link to="page-under-construction" style={{ color: "white" }}>
                 List your property
@@ -60,7 +60,7 @@ function Navbar() {
               <i className="fa fa-user-circle"></i>
             </div>
 
-            <div className="userIcon">
+            <div className="navbarToggle">
               <i
                 className="fa fa-bars"
                 aria-hidden="true"

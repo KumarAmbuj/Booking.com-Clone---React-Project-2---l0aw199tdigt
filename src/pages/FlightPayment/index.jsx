@@ -6,6 +6,11 @@ import { useContext, useRef } from "react";
 
 import { FlightCode } from "../../Constant/constant";
 import { monthNames, dayNames } from "../../Constant/constant";
+import {
+  cardNumberValidator,
+  cvvValidator,
+  nameValidator,
+} from "../../Constant/constant";
 
 function FlightPayment() {
   const navigate = useNavigate();
@@ -20,18 +25,18 @@ function FlightPayment() {
 
   function handleClick() {
     if (
-      cardHolderName.current.value &&
-      cardNumber.current.value &&
+      nameValidator(cardHolderName.current.value) &&
+      cardNumberValidator(cardNumber.current.value) &&
       expiryDate.current.value &&
-      cvv.current.value
+      cvvValidator(cvv.current.value)
     ) {
       navigate("/booking-confirm");
     } else {
-      if (!cardHolderName.current.value) {
+      if (!nameValidator(cardHolderName.current.value)) {
         cardHolderName.current.focus();
         cardHolderName.current.style.outline = "1px solid red";
       }
-      if (!cardNumber.current.value) {
+      if (!cardNumberValidator(cardNumber.current.value)) {
         cardNumber.current.focus();
         cardNumber.current.style.outline = "1px solid red";
       }
@@ -39,7 +44,7 @@ function FlightPayment() {
         expiryDate.current.focus();
         expiryDate.current.style.outline = "1px solid red";
       }
-      if (!cvv.current.value) {
+      if (!cvvValidator(cvv.current.value)) {
         cvv.current.focus();
         cvv.current.style.outline = "1px solid red";
       }
@@ -340,7 +345,7 @@ function FlightPayment() {
                       <path d="M116 112H12c-6.627 0-12-5.373-12-12V28c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v72c0 6.627-5.373 12-12 12zM12 24a4 4 0 0 0-4 4v72a4 4 0 0 0 4 4h104a4 4 0 0 0 4-4V28a4 4 0 0 0-4-4zm50.67 49.33a4 4 0 0 0-4-4h-36a4 4 0 0 0 0 8h36a4 4 0 0 0 4-4zm-8 16a4 4 0 0 0-4-4h-28a4 4 0 0 0 0 8h28a4 4 0 0 0 4-4zm49.52-32.92h-23a5.88 5.88 0 0 1-6.09-5.63V38.55a5.88 5.88 0 0 1 6.09-5.63h23a5.88 5.88 0 0 1 6.09 5.63v12.23a5.88 5.88 0 0 1-6.09 5.63zm-21.14-8h19.23v-7.49H83.05zm21.14-7.49z"></path>
                     </svg>
                     <input
-                      type="number"
+                      type="text"
                       placeholder="Enter card number"
                       ref={cardNumber}
                     />
