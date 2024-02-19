@@ -23,14 +23,17 @@ function FlightCheckout() {
   const emailAd = useRef(null);
   const pNumber = useRef(null);
   const gender = useRef(null);
+  const roundTripDate = new Date();
+  roundTripDate.setDate(date.getDate() + 7);
+  //console.log(roundTripDate);
 
   //console.log(state);
   function handleToNavigate() {
     if (
-      fName.current.value &&
-      lName.current.value &&
-      emailAd.current.value &&
-      pNumber.current.value &&
+      nameValidator(fName.current.value) &&
+      nameValidator(lName.current.value) &&
+      emailValidator(emailAd.current.value) &&
+      mobileNumberValidator(pNumber.current.value) &&
       gender
     ) {
       navigate("/flight-payment", {
@@ -91,7 +94,10 @@ function FlightCheckout() {
           {`${dayNames[date.getDay()]} ${date.getDate()} ${
             monthNames[date.getMonth()]
           }`}{" "}
-          - Sat 20 Jan
+          -{" "}
+          {`${dayNames[roundTripDate.getDay()]} ${roundTripDate.getDate()} ${
+            monthNames[roundTripDate.getMonth()]
+          }`}{" "}
         </div>
 
         <div className="FlightFromToCity">
@@ -132,7 +138,7 @@ function FlightCheckout() {
 
                 <div className="emailInputBox">
                   <input
-                    type="number"
+                    type="text"
                     placeholder="Enter phone number"
                     ref={pNumber}
                   />

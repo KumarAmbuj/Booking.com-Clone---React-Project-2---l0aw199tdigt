@@ -23,6 +23,9 @@ function FlightPayment() {
   const expiryDate = useRef(null);
   const cvv = useRef(null);
 
+  const roundTripDate = new Date();
+  roundTripDate.setDate(date.getDate() + 7);
+
   function handleClick() {
     if (
       nameValidator(cardHolderName.current.value) &&
@@ -87,7 +90,10 @@ function FlightPayment() {
           {`${dayNames[date.getDay()]} ${date.getDate()} ${
             monthNames[date.getMonth()]
           }`}{" "}
-          - Sat 27 Jan
+          -{" "}
+          {`${dayNames[roundTripDate.getDay()]} ${roundTripDate.getDate()} ${
+            monthNames[roundTripDate.getMonth()]
+          }`}{" "}
         </div>
 
         <div className="FlightFromToCity">
