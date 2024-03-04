@@ -103,6 +103,13 @@ function Navbar() {
               <span style={{ marginLeft: "10px" }}>Flights</span>
             </button>
           </Link>
+          {isLoggedIn ? (
+            <Link to="/my-trip">
+              <button>My trip</button>
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
 
         {/**Search component */}

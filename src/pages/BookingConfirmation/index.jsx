@@ -1,6 +1,8 @@
 import FlightRegisterSignInNavbar from "../../Component/FlightRegisterSignInNavbar";
 import "./bookingConfirmation.css";
+import { useLocation } from "react-router-dom";
 function BookingConfirmation() {
+  const { state } = useLocation();
   return (
     <>
       <FlightRegisterSignInNavbar />
@@ -11,12 +13,7 @@ function BookingConfirmation() {
           </div>
           <div>
             <div className="bookingText">Your Booking confirmed</div>
-            <div className="bookingId">
-              Your booking id:{" "}
-              {Math.floor(
-                Math.random(200000000 - 100000000) * 100000000 + 100000000
-              )}
-            </div>
+            <div className="bookingId">Your booking id: {state.id}</div>
           </div>
         </div>
       </div>

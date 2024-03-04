@@ -1,26 +1,70 @@
 import FlightRegisterSignInNavbar from "../../Component/FlightRegisterSignInNavbar";
 import "./hotelPayment.css";
-import { memo } from "react";
-import { useLocation } from "react-router-dom";
+import { memo, useContext } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
-import HotelCheckoutAddToYourStayComponent from "../HotelCheckout/HotelCheckoutAddToYourStayComponent";
-import HotelCheckoutArrivalTimeComponent from "../HotelCheckout/HotelCheckoutArrivalTimeComponent";
 import HotelCheckoutBookingDetailsComponent from "../HotelCheckout/HotelCheckoutBookingDetailsComponent";
-import HotelCheckoutComfortDoubleComponent from "../HotelCheckout/HotelCheckoutComfortDoubleComponent";
-import HotelCheckoutGoodToKnowComponent from "../HotelCheckout/HotelCheckoutGoodToKnowComponent";
+
 import HotelCheckoutLeftNameComponent from "../HotelCheckout/HotelCheckoutLeftNameComponent";
 import HotelCheckoutLimitedSupplyComponent from "../HotelCheckout/HotelCheckoutLimitedSupplyComponent";
 
 import HotelCheckoutPaymentComponent from "../HotelCheckout/HotelCheckoutPaymentComponent";
 import HotelCheckoutPriceComponent from "../HotelCheckout/HotelCheckoutPriceComponent";
-import HotelCheckoutSpecialRequestComponent from "../HotelCheckout/HotelCheckoutSpecialRequestComponent";
+
 import HotelPaymentTopComponent from "./HotelPaymentTopComponent";
 import HotelPaymentBottomComponent from "./HotelPaymentBottomComponent";
+import { AuthContext } from "../../authentication/AuthContext";
 
 function HotelPayment() {
+  const navigate = useNavigate();
   const { state } = useLocation();
+  const { date } = useContext(AuthContext);
+  let newDate = new Date(date);
+  //console.log(newDate.toISOString());
+  const token = localStorage.getItem("booking");
+  //console.log(token);
   //console.log(state);
+  //console.log(date);
   const { hotelDetail, index } = state;
+  //console.log(hotelDetail);
+  async function completeBooking() {
+    const data = {
+      bookingType: "hotel",
+      bookingDetails: {
+        hotelId: hotelDetail._id,
+        startDate: newDate.toISOString(),
+        endDate: newDate.toISOString(),
+      },
+    };
+
+    try {
+      //setIsLoader(true);
+      let result = await fetch(
+        `https://academics.newtonschool.co/api/v1/bookingportals/booking`,
+        {
+          method: "POST",
+          headers: {
+            projectId: "0f6ipegajht2",
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+      let resultResponse = await result.json();
+      if (resultResponse.status == "success") {
+        navigate("/booking-confirm",{state:{id:resultResponse.booking._id}});
+      }
+      //console.log("hwyyy", resultResponse);
+      //console.log(resultResponse);
+    } catch {
+      //toast.error("Some error occured");
+      console.log("errorrrrrrrrrrrr");
+      //navigate("/signin");
+    } finally {
+      //setIsLoader(false);
+    }
+  }
   return (
     <>
       <FlightRegisterSignInNavbar />
@@ -91,7 +135,7 @@ function HotelPayment() {
               >
                 Check your booking
               </button>
-              <button className="checkoutNextButton">
+              <button className="checkoutNextButton" onClick={completeBooking}>
                 <span>
                   <svg
                     class="bk-icon -streamline-lock_closed"

@@ -37,6 +37,7 @@ function Signin() {
       );
       let resultResponse = await result.json();
       //console.log("hwyyy", resultResponse);
+      console.log(resultResponse);
 
       if (resultResponse.status === "success") {
         login();

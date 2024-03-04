@@ -16,6 +16,7 @@ import HotelCheckout from "../HotelCheckout";
 import HotelPayment from "../HotelPayment";
 import PageUnderConstruction from "../PageUnderConstruction";
 import BookingConfirmation from "../BookingConfirmation";
+import MyTrip from "../MyTrip";
 
 function Home() {
   return (
@@ -45,6 +46,7 @@ function Home() {
             element={<PageUnderConstruction />}
           />
           <Route path="/booking-confirm" element={<BookingConfirmation />} />
+          <Route path="/my-trip" element={<MyTrip />} />
         </Routes>
       </AuthProvider>
     </div>

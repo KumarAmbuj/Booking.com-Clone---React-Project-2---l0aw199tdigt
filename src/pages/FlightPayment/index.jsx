@@ -13,6 +13,7 @@ import {
 } from "../../Constant/constant";
 
 function FlightPayment() {
+  const token = localStorage.getItem("booking");
   const navigate = useNavigate();
   const { date } = useContext(AuthContext);
   const { state } = useLocation();
@@ -26,6 +27,50 @@ function FlightPayment() {
   const roundTripDate = new Date();
   roundTripDate.setDate(date.getDate() + 7);
 
+  let newDate = new Date(date);
+
+  async function completeFlightBooking() {
+    const data = {
+      bookingType: "flight",
+      bookingDetails: {
+        flightId: singleFlightData._id,
+        startDate: newDate.toISOString(),
+        endDate: newDate.toISOString(),
+      },
+    };
+
+    try {
+      //setIsLoader(true);
+      let result = await fetch(
+        `https://academics.newtonschool.co/api/v1/bookingportals/booking`,
+        {
+          method: "POST",
+          headers: {
+            projectId: "0f6ipegajht2",
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+      let resultResponse = await result.json();
+      console.log(resultResponse);
+      if (resultResponse.status == "success") {
+        navigate("/booking-confirm", {
+          state: { id: resultResponse.booking._id },
+        });
+      }
+      //console.log("hwyyy", resultResponse);
+      //console.log(resultResponse);
+    } catch {
+      //toast.error("Some error occured");
+      console.log("errorrrrrrrrrrrr");
+      //navigate("/signin");
+    } finally {
+      //setIsLoader(false);
+    }
+  }
+
   function handleClick() {
     if (
       nameValidator(cardHolderName.current.value) &&
@@ -33,7 +78,9 @@ function FlightPayment() {
       expiryDate.current.value &&
       cvvValidator(cvv.current.value)
     ) {
-      navigate("/booking-confirm");
+      //navigate("/booking-confirm");
+      // calling function
+      completeFlightBooking();
     } else {
       if (!nameValidator(cardHolderName.current.value)) {
         cardHolderName.current.focus();
