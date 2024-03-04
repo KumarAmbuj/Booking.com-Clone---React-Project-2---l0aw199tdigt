@@ -6,7 +6,9 @@ import { useContext } from "react";
 import { monthNames, dayNames } from "../../../Constant/constant";
 
 function HotelCheckoutBookingDetailsComponent(props) {
-  const { date } = useContext(AuthContext);
+  const { date, checkoutDate } = useContext(AuthContext);
+  console.log(date);
+  console.log(checkoutDate);
   const { data, index } = props;
   return (
     <>
@@ -25,10 +27,10 @@ function HotelCheckoutBookingDetailsComponent(props) {
           <div className="checkoutBox">
             <div className="checkinText">Check-out</div>
             <div className="checkinDateText">{`${
-              dayNames[date.getDay()]
-            } ${date.getDate()} ${
-              monthNames[date.getMonth()]
-            } ${date.getFullYear()}`}</div>
+              dayNames[checkoutDate.getDay()]
+            } ${checkoutDate.getDate()} ${
+              monthNames[checkoutDate.getMonth()]
+            } ${checkoutDate.getFullYear()}`}</div>
             <div className="checkinTimeText">12:00 – 12:30</div>
           </div>
         </div>

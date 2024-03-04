@@ -7,6 +7,7 @@ function AuthProvider({ children }) {
   const [token, setToken] = useState("");
   const [userName, setUserName] = useState("");
   const [date, setDate] = useState(new Date());
+  const [checkoutDate, setCheckoutDate] = useState(new Date());
 
   //console.log(isLoggedIn, token);
 
@@ -30,6 +31,9 @@ function AuthProvider({ children }) {
   const SetDate = (val) => {
     setDate(val);
   };
+  const SetCheckoutDate = (val) => {
+    setCheckoutDate(val);
+  };
   useEffect(() => {
     if (localStorage.getItem("booking") == null) {
       localStorage.setItem("booking", "");
@@ -52,6 +56,8 @@ function AuthProvider({ children }) {
         SetUserName,
         date,
         SetDate,
+        checkoutDate,
+        SetCheckoutDate,
       }}
     >
       {children}

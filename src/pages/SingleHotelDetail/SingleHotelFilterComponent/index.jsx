@@ -2,8 +2,11 @@ import "./singleHotelFilterComponent.css";
 import { HotelListArray } from "../../../Constant/constant";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { AuthContext } from "../../../authentication/AuthContext";
+import { useContext } from "react";
 
 function SingleHotelFilterComponent() {
+  const { SetDate, SetCheckoutDate } = useContext(AuthContext);
   const navigate = useNavigate();
   const [searchCity, setSearchCity] = useState("");
   function handleSearchSelect(e) {
@@ -14,6 +17,14 @@ function SingleHotelFilterComponent() {
     if (searchCity.length > 0) {
       navigate(`/hotel-list/${searchCity}`);
     }
+  }
+  function handleCheckinDate(e) {
+    SetDate(new Date(e.target.value));
+    //console.log("heyyy");
+  }
+  function handleCheckoutDate(e) {
+    SetCheckoutDate(new Date(e.target.value));
+    //console.log(e.target.value);
   }
 
   return (
@@ -43,13 +54,13 @@ function SingleHotelFilterComponent() {
         <div className="destinationText">Check-in-date:</div>
         <div className="filterInputBox">
           <i class="fa fa-calendar" aria-hidden="true"></i>
-          <input type="text" />
+          <input type="date" onSelect={handleCheckinDate} />
         </div>
 
         <div className="destinationText">Check-out-date:</div>
         <div className="filterInputBox">
           <i class="fa fa-calendar" aria-hidden="true"></i>
-          <input type="text" />
+          <input type="date" onChange={handleCheckoutDate} />
         </div>
 
         <div className="destinationText"></div>

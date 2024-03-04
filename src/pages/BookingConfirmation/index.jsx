@@ -1,6 +1,7 @@
 import FlightRegisterSignInNavbar from "../../Component/FlightRegisterSignInNavbar";
 import "./bookingConfirmation.css";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 function BookingConfirmation() {
   const { state } = useLocation();
   return (
@@ -14,6 +15,11 @@ function BookingConfirmation() {
           <div>
             <div className="bookingText">Your Booking confirmed</div>
             <div className="bookingId">Your booking id: {state.id}</div>
+            <div className="bookingHistoryButton">
+              <Link to="/my-trip">
+                <button>Order History</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

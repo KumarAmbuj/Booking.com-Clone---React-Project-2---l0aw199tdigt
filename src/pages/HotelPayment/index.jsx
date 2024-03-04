@@ -18,8 +18,9 @@ import { AuthContext } from "../../authentication/AuthContext";
 function HotelPayment() {
   const navigate = useNavigate();
   const { state } = useLocation();
-  const { date } = useContext(AuthContext);
+  const { date, checkoutDate } = useContext(AuthContext);
   let newDate = new Date(date);
+  let newDate2 = new Date(checkoutDate);
   //console.log(newDate.toISOString());
   const token = localStorage.getItem("booking");
   //console.log(token);
@@ -33,7 +34,7 @@ function HotelPayment() {
       bookingDetails: {
         hotelId: hotelDetail._id,
         startDate: newDate.toISOString(),
-        endDate: newDate.toISOString(),
+        endDate: newDate2.toISOString(),
       },
     };
 
@@ -53,7 +54,9 @@ function HotelPayment() {
       );
       let resultResponse = await result.json();
       if (resultResponse.status == "success") {
-        navigate("/booking-confirm",{state:{id:resultResponse.booking._id}});
+        navigate("/booking-confirm", {
+          state: { id: resultResponse.booking._id },
+        });
       }
       //console.log("hwyyy", resultResponse);
       //console.log(resultResponse);

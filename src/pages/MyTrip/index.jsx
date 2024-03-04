@@ -38,7 +38,7 @@ function MyTrip() {
   return (
     <div>
       <FlightNavbar />
-      {data.map((val) => {
+      {data?.reverse().map((val) => {
         return <MyTripComponent data={val} />;
       })}
     </div>
