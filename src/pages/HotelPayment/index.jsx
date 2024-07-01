@@ -53,6 +53,7 @@ function HotelPayment() {
         }
       );
       let resultResponse = await result.json();
+      //console.log(resultResponse);
       if (resultResponse.status == "success") {
         navigate("/booking-confirm", {
           state: { id: resultResponse.booking._id },

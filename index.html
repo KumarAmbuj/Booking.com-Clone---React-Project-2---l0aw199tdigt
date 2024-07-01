@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.7.4-min.js.gz"></script>
+    <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.4.1-min.js.gz"></script>
+    <script src="https://cdn.amplitude.com/libs/plugin-autocapture-browser-0.9.0-min.js.gz"></script>
+    <script>
+      window.amplitude
+        .add(window.sessionReplay.plugin({ sampleRate: 1 }))
+        .promise.then(function () {
+          window.amplitude.add(window.amplitudeAutocapturePlugin.plugin());
+          window.amplitude.init("f11d4fc0097c7ee2f82ea7d80070f5fe");
+        });
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +19,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Vite + React</title>
+    <title>Booking</title>
   </head>
   <body>
     <div id="root"></div>
